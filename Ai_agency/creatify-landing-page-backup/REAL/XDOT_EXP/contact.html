@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Xdot - Get a Website in 24 Hours</title>
+    <meta name="description" content="Contact Xdot to get a single-page website in 6-24 hours or a professional AI product catalog for 80% less cost. Get your free quote today.">
+    <meta name="keywords" content="contact, fast web development, ai catalog maker, 24 hour website, affordable product photography">
+    <meta name="author" content="Xdot Agency">
+
+    <meta property="og:title" content="Contact Xdot - Get a Website in 24 Hours">
+    <meta property="og:description" content="Need a website by tomorrow? Or a pro catalog for 80% less? Get in touch with Xdot.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Xdot.agency/contact">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Xdot - Get a Website in 24 Hours">
+    <meta name="twitter:description" content="AI-powered web development and catalog design. Get your quote.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #000000;">
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div id="announcement-bar" class="fixed top-0 left-0 w-full bg-black text-white p-3 shadow-lg transition-all duration-300 ease-in-out z-50 border-b border-gray-800">
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="flex items-center justify-between">
+
+                <!-- Left Side: Icon and Text -->
+                <div class="flex items-center gap-3">
+                    <!-- Icon -->
+                    <div class="hidden sm:block flex-shrink-0 text-gray-400">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="text-sm sm:text-base font-medium text-gray-300">
+                        <span class="font-bold text-white">⚡ FLASH SALE:</span>
+                        Get 50% OFF all 24-Hour Website packages!
+                        <a href="./contact.html" class="hidden md:inline-block font-bold text-white hover:text-gray-300 transition-colors ml-1 underline">
+                            Claim Offer
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Close Button -->
+                <div class="flex-shrink-0">
+                    <button id="close-bar-btn" class="ml-4 p-1 rounded-full text-gray-500 hover:text-white hover:bg-gray-700 transition-colors" aria-label="Dismiss announcement">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" class="logo-text">Xdot</a>
+                </div>
+
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="work.html" class="nav-link">Works</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav-contact">
+                    <a href="./contact.html">
+                    <button class="simple-btn" id="simpleBtn" aria-label="Get in touch with us">
+                        Get in touch
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero-section">
+            <div class="contact-hero-content">
+                <div class="contact-hero-text">
+                    <h1 class="contact-title">
+                        Get Your Site by Tomorrow.
+                        <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Start Now.</span>
+                    </h1>
+                    <p class="contact-subtitle">
+                        Ready to launch? Tell us what you need. A stunning AI product catalog at 80% less cost,
+                        or a blazing-fast single-page website live in as little as 6 hours. Let's make it happen.
+                    </p>
+                </div>
+
+                <div class="contact-form-container">
+                    <div class="contact-form-card">
+                        <div class="form-header">
+                            <h2 class="form-title">Get Your Free Quote</h2>
+                            <p class="form-description">We respond in hours, not days. Tell us what you need.</p>
+                        </div>
+
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                            <input type="hidden" name="access_key" value="711612f6-ee45-43b4-8f8f-0199ed0e038e">
+                            <input type="hidden" name="subject" value="New Contact Form Submission - Xdot Agency">
+                            <input type="hidden" name="from_name" value="Xdot Agency Contact Form">
+
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    class="form-input"
+                                    placeholder="Your full name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-input"
+                                    placeholder="your.email@example.com"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">How can we help? *</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    class="form-textarea"
+                                    placeholder="e.g., 'I need a single-page website for my startup, fast.' or 'I have 50 phone photos I need made into a pro catalog.'"
+                                    rows="6"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="submit-btn" id="submitBtn">
+                                    <span class="btn-text">Get My Quote</span>
+                                    <div class="btn-loader" id="btnLoader"></div>
+                                </button>
+                            </div>
+
+                            <div class="form-message" id="formMessage"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-info-section">
+            <div class="container mx-auto px-4">
+                <div class="contact-info-grid">
+                    <div class="contact-info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="info-title">Email Us</h3>
+                        <p class="info-text">
+project@xdot.shop</p>
+                        <button class="copy-btn" data-copy="hello@Xdot.agency">
+                            <span class="copy-text">Copy Email</span>
+                            <span class="copied-text">Copied!</span>
+                        </button>
+                    </div>
+
+
+                    <div class="contact-info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="info-title">Response Time</h3>
+                        <p class="info-text">Within 24 hours</p>
+                        <p class="info-subtext">We typically respond to all inquiries within one business day.</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="info-title">Location</h3>
+                        <p class="info-text">Global Digital Agency</p>
+                        <p class="info-subtext">Serving clients worldwide with remote collaboration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Xdot Agency. All rights reserved.</p>
+                </div>
+               <!--<div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+                </div>-->
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.querySelector('.btn-text');
+            const btnLoader = document.getElementById('btnLoader');
+            const formMessage = document.getElementById('formMessage');
+
+            // Copy email functionality
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const email = this.dataset.copy;
+                    navigator.clipboard.writeText(email).then(() => {
+                        this.classList.add('copied');
+                        setTimeout(() => {
+                            this.classList.remove('copied');
+                        }, 2000);
+                    });
+                });
+            });
+
+            // Form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Show loading state
+                submitBtn.disabled = true;
+                btnText.textContent = 'Sending...';
+                btnLoader.style.display = 'block';
+                formMessage.innerHTML = '';
+
+                // Prepare form data
+                const formData = new FormData(this);
+
+                // Submit form
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Success
+                        formMessage.innerHTML = '<div class="success-message">Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.</div>';
+                        contactForm.reset();
+                    } else {
+                        // Error
+                        formMessage.innerHTML = '<div class="error-message">Sorry, there was an error sending your message. Please try again or contact us directly.</div>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Form submission error:', error);
+                    formMessage.innerHTML = '<div class="error-message">Network error. Please check your connection and try again.</div>';
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    btnText.textContent = 'Get My Quote';
+                    btnLoader.style.display = 'none';
+                });
+            });
+
+            // GSAP Animations for contact page
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Hero section animations
+            gsap.from('.contact-title', {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: 'power2.out'
+            });
+
+            gsap.from('.contact-subtitle', {
+                opacity: 0,
+                y: 30,
+                duration: 1,
+                delay: 0.3,
+                ease: 'power2.out'
+            });
+
+            gsap.from('.contact-form-card', {
+                y: 50,
+                duration: 1,
+                delay: 0.6,
+                ease: 'power2.out'
+            });
+
+            // Contact info cards animation
+            gsap.from('.contact-info-card', {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: '.contact-info-section',
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+
+            // Form field animations
+            gsap.from('.form-group', {
+                opacity: 0,
+                x: -30,
+                duration: 0.6,
+                stagger: 0.1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: '.contact-form-container',
+                    start: 'top 70%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+    </script>
+</body>
+</html>

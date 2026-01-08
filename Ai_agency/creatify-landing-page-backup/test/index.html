@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <span class="logo-text">ejajul</span>
+                </div>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact Us</a>
+                    </li>
+
+                </ul>
+
+                <!-- Simple Contact Button -->
+                <div class="nav-contact">
+                    <button class="simple-btn" id="simpleBtn" aria-label="Get in touch with us">
+                        Get in touch
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="media-grid">
+                
+               
+                </div>
+                <div class="parallax-media absolute top-[12%] right-[12%] w-[15vw] h-[35vh]" data-speed="40">
+                    <img src="./assets/sunsscreen.jpeg" alt="Asteroid in space" class="media-element">
+                </div>
+                <div class="parallax-media absolute top-[12%] left-[10%] w-[10vw] h-[25vh]" data-speed="20">
+                    <img src="./assets/icecream.jpeg" alt="Laptop screen" class="media-element">
+                </div>
+                 <div class="parallax-media absolute top-[20%] left-[17%] w-[15vw] h-[15vh]" data-speed="30">
+                    <img src="./assets/water_bottle.jpeg" alt="Laptop screen" class="media-element">
+                </div>
+                <div class="parallax-media absolute bottom-[10%] left-[8%] w-[15vw] h-[30vh]" data-speed="-35">
+                    <img src="./assets/specs.jpeg" alt="Mobile app screen" class="media-element">
+                </div>
+                <div class="parallax-media absolute bottom-[5%] left-[35%] w-[16vw] h-[18vh]" data-speed="25">
+                     <img src="./assets/princles.jpeg" alt="Tennis balls on a phone" class="media-element">
+                </div>
+                <div class="parallax-media absolute top-[55%] right-[20%] w-[10vw] h-[15vh]" data-speed="-20">
+                    <img src="./assets/shine.jpeg" alt="Pink blur" class="media-element">
+                </div>
+                <div class="parallax-media absolute bottom-[15%] right-[8%] w-[15vw] h-[25vh]" data-speed="30">
+                     <img src="./assets/earring.jpeg" alt="Laptop with logo" class="media-element">
+                </div>
+            </div>
+
+            <div class="relative z-10 text-center px-3">
+                <h1 class="text-white text-5xl md:text-7xl lg:text-6xl font-medium max-w-5xl leading-tight">
+                    Turn your vision into a remarkable 
+                    <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">brand, website or ai product</span>
+                </h1>
+                <p class="text-neutral-400 mt-6 mb-10 text-lg md:text-xl">A decade of proven results for startups scaling from Series A to unicorn</p>
+                
+            </div>
+        </section>
+
+        <!-- Manifesto Section -->
+        <section class="manifesto-section">
+            <div class="container mx-auto px-4 py-20">
+                <div class="max-w-6xl mx-auto">
+                    <div class="manifesto-content">
+                        <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-16 text-center">
+                            <span class="text-black">The</span> <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Digital Alchemist</span> <span class="text-black">Manifesto</span>
+                        </h2>
+
+                        <div class="manifesto-text">
+                            <p class="text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed font-light">
+                                <span class="manifesto-line inline-block" data-line="1">I don't just build websites;</span>
+                                <span class="manifesto-line inline-block" data-line="2">I design <span class="text-white font-medium">digital ecosystems.</span></span>
+                            </p>
+
+                            <p class="text-lg md:text-xl lg:text-2xl text-gray-400 leading-relaxed font-light mt-8">
+                                <span class="manifesto-line inline-block" data-line="3">By fusing <span class="text-white font-medium">intuitive UI/UX design</span></span>
+                                <span class="manifesto-line inline-block" data-line="4">with <span class="text-white font-medium">intelligent AI-powered creative</span></span>
+                                <span class="manifesto-line inline-block" data-line="5">and <span class="text-white font-medium">robust web development,</span></span>
+                            </p>
+
+                            <p class="text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed font-light mt-8">
+                                <span class="manifesto-line inline-block" data-line="6">I create platforms that don't just exist—</span>
+                                <span class="manifesto-line inline-block" data-line="7"><span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text font-bold">they perform.</span></span>
+                            </p>
+
+                            <div class="manifesto-services mt-16">
+                                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                    <div class="service-item text-center manifesto-service-item" data-service="ui-ux-design" data-target-service="ui-ux-design">
+                                        <div class="service-icon w-20 h-20 mx-auto mb-4 rounded-full bg-white border-2 border-gray-800 flex items-center justify-center">
+                                            <span class="text-black text-2xl font-bold">UI</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-black mb-2">UI/UX Design</h3>
+                                        <p class="text-gray-400 text-sm">Intuitive interfaces that users love to interact with</p>
+                                    </div>
+
+                                    <div class="service-item text-center manifesto-service-item" data-service="ai-creatives" data-target-service="ai-creatives">
+                                        <div class="service-icon w-20 h-20 mx-auto mb-4 rounded-full bg-white border-2 border-gray-800 flex items-center justify-center">
+                                            <span class="text-black text-2xl font-bold">AI</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-black mb-2">AI Creative</h3>
+                                        <p class="text-gray-400 text-sm">Intelligent automation that enhances creativity</p>
+                                    </div>
+
+                                    <div class="service-item text-center manifesto-service-item" data-service="web-development" data-target-service="web-development">
+                                        <div class="service-icon w-20 h-20 mx-auto mb-4 rounded-full bg-white border-2 border-gray-800 flex items-center justify-center">
+                                            <span class="text-black text-2xl font-bold">WD</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-black mb-2">Web Development</h3>
+                                        <p class="text-gray-400 text-sm">Robust, scalable solutions built for performance</p>
+                                    </div>
+
+                                    <div class="service-item text-center manifesto-service-item" data-service="ai-photography" data-target-service="ai-photography">
+                                        <div class="service-icon w-20 h-20 mx-auto mb-4 rounded-full bg-white border-2 border-gray-800 flex items-center justify-center">
+                                            <span class="text-black text-2xl font-bold">BR</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-black mb-2">Brand Strategy</h3>
+                                        <p class="text-gray-400 text-sm">Strategic positioning that drives results</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work Section -->
+        <section class="featured-work-section">
+            <div class="container mx-auto px-4 py-20">
+                <div class="max-w-7xl mx-auto">
+                    <!-- Section Header -->
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8">
+                            <span class="text-white">From Vision to</span> <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Victory</span>
+                        </h2>
+                        <p class="text-neutral-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                            Real results for remarkable companies. Discover how we've transformed ideas into digital success stories that drive growth and engagement.
+                        </p>
+                    </div>
+
+                    <!-- Featured Projects Grid -->
+                    <div class="featured-projects-grid">
+                        <!-- Project 1: E-Commerce Platform -->
+                        <div class="project-card" data-project="ecommerce-platform">
+                            <div class="project-image">
+                                <div class="project-placeholder bg-gradient-to-br from-purple-900 to-pink-900"></div>
+                                <div class="project-overlay">
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">React</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">MongoDB</span>
+                                        <span class="tech-badge">Stripe</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3 class="project-title">E-Commerce Revolution</h3>
+                                    <p class="project-description">Complete digital transformation for a retail giant, increasing online sales by 300% and reducing cart abandonment by 60%.</p>
+                                </div>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">300%</span>
+                                        <span class="metric-label">Sales Increase</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">60%</span>
+                                        <span class="metric-label">Less Abandonment</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">2.1M</span>
+                                        <span class="metric-label">Active Users</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2: AI SaaS Platform -->
+                        <div class="project-card" data-project="ai-saas-platform">
+                            <div class="project-image">
+                                <div class="project-placeholder bg-gradient-to-br from-blue-900 to-cyan-900"></div>
+                                <div class="project-overlay">
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">TensorFlow</span>
+                                        <span class="tech-badge">React</span>
+                                        <span class="tech-badge">AWS</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3 class="project-title">AI-Powered Analytics</h3>
+                                    <p class="project-description">Revolutionary SaaS platform using machine learning to provide predictive insights, helping businesses make data-driven decisions.</p>
+                                </div>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">95%</span>
+                                        <span class="metric-label">Accuracy Rate</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">50K+</span>
+                                        <span class="metric-label">Predictions/Day</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">120</span>
+                                        <span class="metric-label">Enterprise Clients</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: Mobile Banking App -->
+                        <div class="project-card" data-project="mobile-banking">
+                            <div class="project-image">
+                                <div class="project-placeholder bg-gradient-to-br from-green-900 to-emerald-900"></div>
+                                <div class="project-overlay">
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">React Native</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">PostgreSQL</span>
+                                        <span class="tech-badge">Biometrics</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3 class="project-title">Next-Gen Banking</h3>
+                                    <p class="project-description">Award-winning mobile banking application with biometric security and intuitive UX, setting new industry standards.</p>
+                                </div>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">4.9★</span>
+                                        <span class="metric-label">App Rating</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">1M+</span>
+                                        <span class="metric-label">Downloads</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">99.9%</span>
+                                        <span class="metric-label">Uptime</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: Healthcare Platform -->
+                        <div class="project-card" data-project="healthcare-platform">
+                            <div class="project-image">
+                                <div class="project-placeholder bg-gradient-to-br from-rose-900 to-pink-900"></div>
+                                <div class="project-overlay">
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">Vue.js</span>
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">Docker</span>
+                                        <span class="tech-badge">HIPAA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3 class="project-title">Healthcare Innovation</h3>
+                                    <p class="project-description">Comprehensive telemedicine platform connecting patients with healthcare providers, improving access to care across regions.</p>
+                                </div>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">10K+</span>
+                                        <span class="metric-label">Consultations</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">85%</span>
+                                        <span class="metric-label">Cost Reduction</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">500+</span>
+                                        <span class="metric-label">Healthcare Pros</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Project 4: Healthcare Platform -->
+                        <div class="project-card" data-project="healthcare-platform">
+                            <div class="project-image">
+                                <div class="project-placeholder bg-gradient-to-br from-rose-900 to-pink-900"></div>
+                                <div class="project-overlay">
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">Vue.js</span>
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">Docker</span>
+                                        <span class="tech-badge">HIPAA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3 class="project-title">Healthcare Innovation</h3>
+                                    <p class="project-description">Comprehensive telemedicine platform connecting patients with healthcare providers, improving access to care across regions.</p>
+                                </div>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">10K+</span>
+                                        <span class="metric-label">Consultations</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">85%</span>
+                                        <span class="metric-label">Cost Reduction</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">500+</span>
+                                        <span class="metric-label">Healthcare Pros</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Project 4: Healthcare Platform -->
+                        <div class="project-card" data-project="healthcare-platform">
+                            <div class="project-image">
+                                <div class="project-placeholder bg-gradient-to-br from-rose-900 to-pink-900"></div>
+                                <div class="project-overlay">
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">Vue.js</span>
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">Docker</span>
+                                        <span class="tech-badge">HIPAA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3 class="project-title">Healthcare Innovation</h3>
+                                    <p class="project-description">Comprehensive telemedicine platform connecting patients with healthcare providers, improving access to care across regions.</p>
+                                </div>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">10K+</span>
+                                        <span class="metric-label">Consultations</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">85%</span>
+                                        <span class="metric-label">Cost Reduction</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">500+</span>
+                                        <span class="metric-label">Healthcare Pros</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="featured-cta text-center mt-20">
+                        <div class="cta-content">
+                            <h3 class="text-2xl md:text-4xl font-bold text-white mb-6">
+                                Ready to Join the <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Success Stories?</span>
+                            </h3>
+                            <p class="text-neutral-400 text-lg mb-8 max-w-2xl mx-auto">
+                                Let's discuss how we can transform your vision into measurable results that drive real business growth.
+                            </p>
+                            <div class="cta-buttons">
+                                <button class="featured-cta-btn primary" aria-label="View our full portfolio">
+                                    View Full Portfolio
+                                </button>
+                                <button class="featured-cta-btn secondary" aria-label="Start your project discussion">
+                                    Start Your Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

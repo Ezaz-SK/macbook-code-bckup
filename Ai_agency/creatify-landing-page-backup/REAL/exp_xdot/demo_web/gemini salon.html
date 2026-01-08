@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiance Salon | Luxury Hair Artistry</title>
+    
+    <!-- Google Fonts: Playfair Display (Headings) & Lato (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- All CSS is in this <style> tag -->
+    <style>
+        /* --------------------------------- */
+        /* 1. Global & Root Variables        */
+        /* --------------------------------- */
+        :root {
+            --primary-color: #d4af37; /* A sophisticated gold */
+            --secondary-color: #2c2c2c; /* A very dark gray */
+            --bg-color: #ffffff;
+            --text-color: #555555;
+            --light-gray: #f7f7f7; /* Slightly lighter gray for a cleaner feel */
+            --border-gray: #eeeeee;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        section {
+            padding: 5rem 1rem; /* Increased mobile padding */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 0.9rem 2rem;
+            border: 1px solid var(--primary-color);
+            border-radius: 2px; /* Sharper edges for luxury feel */
+            font-weight: 600;
+            font-family: var(--font-body);
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* --------------------------------- */
+        /* 2. Navigation Bar                 */
+        /* --------------------------------- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 1.5rem; /* More vertical padding */
+            background-color: var(--bg-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Softer shadow */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .logo svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 0.6rem;
+            fill: var(--secondary-color);
+        }
+        
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: -100%; /* Hidden by default */
+            width: 100%;
+            height: 100vh;
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            transition: left 0.3s ease-in-out;
+            align-items: center;
+            padding-top: 5rem;
+        }
+        
+        .nav-links.active {
+            left: 0; /* Show menu */
+        }
+
+        .nav-links li {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--bg-color);
+            font-size: 1.2rem;
+            font-weight: 400; /* Regular weight */
+        }
+        
+        .navbar .cta-button {
+            display: none; /* Hide on mobile */
+        }
+        
+        .hamburger, .close-menu {
+            display: block;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            z-index: 1001;
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            color: var(--bg-color);
+            font-size: 2.2rem;
+        }
+
+        /* --------------------------------- */
+        /* 3. Hero Section                   */
+        /* --------------------------------- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 90vh;
+            padding: 2rem;
+            position: relative;
+            color: var(--bg-color);
+            /* Darker overlay for more contrast */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1920x1080/?salon,interior') no-repeat center center/cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            color: var(--bg-color);
+            font-size: 3rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .cta-button {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        
+        .hero .cta-button:hover {
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            border-color: var(--bg-color);
+        }
+
+        /* --------------------------------- */
+        /* 4. Signature Services             */
+        /* --------------------------------- */
+        #services {
+            background-color: var(--light-gray);
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .service-card {
+            background-color: var(--bg-color);
+            border-radius: 2px;
+            overflow: hidden;
+            border: 1px solid var(--border-gray); /* Clean border */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Much subtler shadow */
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .service-card-content {
+            padding: 2rem; /* More padding */
+        }
+        
+        .secondary-cta {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* --------------------------------- */
+        /* 5. Gallery                        */
+        /* --------------------------------- */
+        #gallery {
+            border-top: 1px solid var(--border-gray);
+        }
+        
+        .gallery-grid {
+            column-count: 2;
+            column-gap: 1rem;
+        }
+        
+        .gallery-grid img {
+            width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --------------------------------- */
+        /* 6. About Us                       */
+        /* --------------------------------- */
+        #about {
+            background-color: var(--light-gray); /* Changed */
+            /* border-top removed */
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem; /* More gap */
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .about-image img {
+            border-radius: 2px;
+        }
+        
+        .stylist-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .stylist-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* This centers the image and text blocks perfectly */
+        }
+        
+        .stylist-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid var(--bg-color); /* Pop-out effect */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stylist-card h4 {
+            margin-bottom: 0.2rem;
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+        }
+        
+        .stylist-card p {
+            font-size: 1rem;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+
+        /* --------------------------------- */
+        /* 7. Social Proof (Testimonials)    */
+        /* --------------------------------- */
+        #testimonials {
+            background-color: var(--bg-color); /* Changed */
+            border-top: 1px solid var(--border-gray); /* Added */
+            text-align: center;
+        }
+        
+        .slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            min-height: 220px;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        
+        .slide.active {
+            position: relative;
+            opacity: 1;
+        }
+        
+        .slide blockquote {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-style: italic;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .slide footer {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-style: normal;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        /* --------------------------------- */
+        /* 8. Contact & Booking              */
+        /* --------------------------------- */
+        #contact {
+            background-color: var(--light-gray); /* Added */
+            /* border-top removed */
+        }
+        
+        .contact-main-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-form-container h3,
+        .contact-info-container h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            border: 1px solid var(--border-gray);
+            border-radius: 2px;
+            background-color: var(--light-gray);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+        
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .contact-form .cta-button {
+            width: 100%;
+            border: 0;
+            font-size: 1rem;
+        }
+        
+        .contact-info-container .contact-column {
+            margin-bottom: 2.5rem;
+        }
+        
+        .contact-column h3 {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .contact-column ul {
+            list-style: none;
+        }
+        
+        .contact-column li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        
+        .contact-column .cta-button {
+            margin-top: 1.5rem;
+        }
+        
+        .map-container {
+            margin-top: 4rem;
+            width: 100%;
+            border-radius: 2px;
+            overflow: hidden;
+            border: 1px solid var(--border-gray);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+
+        /* --------------------------------- */
+        /* 9. Footer                         */
+        /* --------------------------------- */
+        .footer {
+            background-color: var(--secondary-color);
+            color: #a0a0a0;
+            padding: 4rem 1rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--bg-color);
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+        
+        .footer .logo svg {
+            fill: var(--bg-color);
+        }
+        
+        .footer .logo-text {
+            font-family: var(--font-heading);
+        }
+        
+        .footer-column h4 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--bg-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-column a {
+            color: #a0a0a0;
+            font-weight: 300;
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-column p {
+            font-weight: 300;
+        }
+        
+        .social-icons a {
+            color: var(--bg-color);
+            margin: 0 0.75rem;
+            display: inline-block;
+        }
+        
+        .social-icons svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--bg-color);
+            transition: fill 0.3s ease;
+        }
+        
+        .social-icons a:hover svg {
+            fill: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+        
+        .footer-bottom a {
+            font-weight: 400;
+        }
+
+        /* --------------------------------- */
+        /* 10. Responsive Media Queries      */
+        /* --------------------------------- */
+
+        /* --- Tablet (768px and up) --- */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 4.5rem;
+            }
+            h2 {
+                font-size: 3rem;
+            }
+            section {
+                padding: 6rem 2rem;
+            }
+
+            /* Nav */
+            .nav-links {
+                position: static;
+                flex-direction: row;
+                height: auto;
+                width: auto;
+                background-color: transparent;
+                padding: 0;
+            }
+            .nav-links li {
+                margin-bottom: 0;
+                margin-left: 2.5rem;
+            }
+            .nav-links a {
+                color: var(--secondary-color);
+                font-size: 1rem;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+            }
+            .nav-links a:hover {
+                color: var(--primary-color);
+            }
+            .navbar .cta-button {
+                display: block;
+            }
+            .hamburger, .close-menu {
+                display: none;
+            }
+
+            /* Services */
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Gallery */
+            .gallery-grid {
+                column-count: 3;
+            }
+
+            /* About */
+            .about-content {
+                flex-direction: row;
+                text-align: left;
+                gap: 4rem;
+            }
+            .about-image {
+                flex-basis: 40%;
+            }
+            .about-text {
+                flex-basis: 60%;
+            }
+            .stylist-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            /* Contact */
+            .contact-main-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 3rem;
+            }
+            
+            /* Footer */
+            .footer {
+                text-align: left;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 3rem;
+            }
+            .footer .logo {
+                justify-content: flex-start;
+            }
+        }
+        
+        /* --- Desktop (1024px and up) --- */
+        @media (min-width: 1024px) {
+            /* Hero */
+            .hero-content {
+                padding: 0;
+            }
+            
+            /* Services */
+            .service-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            /* Gallery */
+            .gallery-grid {
+                column-count: 4;
+            }
+            
+            /* Footer */
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Navigation Bar -->
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <!-- Embedded SVG Logo -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M21.928 5.688a1.5 1.5 0 0 0-2.121 0l-7.387 7.387a.75.75 0 0 1-1.06 0L4.04 5.688a1.5 1.5 0 0 0-2.121 2.121l7.32 7.32a3.75 3.75 0 0 0 5.304 0l7.385-7.385a1.5 1.5 0 0 0 0-2.121ZM9.31 16.516a5.25 5.25 0 1 0-7.424 0 5.25 5.25 0 0 0 7.424 0Zm-1.06-1.06a3.75 3.75 0 1 1-5.304-5.303 3.75 3.75 0 0 1 5.304 5.303Zm6.5 1.06a5.25 5.25 0 1 0-7.424 0 5.25 5.25 0 0 0 7.424 0Zm-1.06-1.06a3.75 3.75 0 1 1-5.304-5.303 3.75 3.75 0 0 1 5.304 5.303Z"/>
+            </svg>
+            <span class="logo-text">Radiance</span>
+        </a>
+        
+        <ul class="nav-links" id="navLinks">
+            <button class="close-menu" id="closeMenu">&times;</button>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <a href="#contact" class="cta-button">Book Now</a>
+        
+        <button class="hamburger" id="hamburgerMenu">&#9776;</button>
+    </nav>
+
+    <main>
+
+        <!-- 2. Hero Section -->
+        <header class="hero" id="home">
+            <div class="hero-content">
+                <h1>Define Your Style. Discover Your Radiance.</h1>
+                <p>An elevated salon experience in SoHo, New York dedicated to personalized hair artistry, color, and luxury treatments.</p>
+                <a href="#contact" class="cta-button">Book Your Experience</a>
+            </div>
+        </header>
+
+        <!-- 3. Signature Services -->
+        <section id="services" class="container">
+            <h2>Our Signature Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="https://source.unsplash.com/600x400/?haircut,style" alt="Precision Cuts & Styling" onerror="this.src='https://placehold.co/600x400/d4af37/2c2c2c?text=Precision+Cuts'">
+                    <div class="service-card-content">
+                        <h3>Precision Cuts & Styling</h3>
+                        <p>Bespoke haircuts tailored to your face shape and lifestyle, from timeless bobs to modern layers.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://source.unsplash.com/600x400/?hair,color" alt="Expert Color & Balayage" onerror="this.src='https://placehold.co/600x400/d4af37/2c2c2c?text=Expert+Color'">
+                    <div class="service-card-content">
+                        <h3>Expert Color & Balayage</h3>
+                        <p>Masterful color, from rich, natural tones to sun-kissed balayage and vibrant transformations.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://source.unsplash.com/600x400/?hair,treatment" alt="Luxury Hair Treatments" onerror="this.src='https://placehold.co/600x400/d4af37/2c2c2c?text=Luxury+Treatments'">
+                    <div class="service-card-content">
+                        <h3>Luxury Hair Treatments</h3>
+                        <p>Revitalize your hair with deep conditioning, keratin, and bond-building treatments.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://source.unsplash.com/600x400/?bridal,hair" alt="Special Occasion & Bridal" onerror="this.src='https://placehold.co/600x400/d4af37/2c2c2c?text=Bridal+Styling'">
+                    <div class="service-card-content">
+                        <h3>Special Occasion & Bridal</h3>
+                        <p>Elegant updos and styling for your most memorable events.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="secondary-cta">View Full Service Menu & Pricing &rarr;</a>
+        </section>
+
+        <!-- 4. Gallery -->
+        <section id="gallery" class="container">
+            <h2>Our Work. Your Inspiration.</h2>
+            <div class="gallery-grid">
+                <!-- Live images from Unsplash -->
+                <img src="https://source.unsplash.com/400x500/?hairstyle" alt="Salon work 1" onerror="this.src='https://placehold.co/400x500/eee/999?text=Client+Photo+1'">
+                <img src="https://source.unsplash.com/400x600/?balayage" alt="Salon work 2" onerror="this.src='https://placehold.co/400x600/eee/999?text=Client+Photo+2'">
+                <img src="https://source.unsplash.com/400x450/?blonde,hair" alt="Salon work 3" onerror="this.src='https://placehold.co/400x450/eee/999?text=Client+Photo+3'">
+                <img src="https://source.unsplash.com/400x550/?brunette,hair" alt="Salon work 4" onerror="this.src='https://placehold.co/400x550/eee/999?text=Client+Photo+4'">
+                <img src="https://source.unsplash.com/400x500/?hair,fashion" alt="Salon work 5" onerror="this.src='https://placehold.co/400x500/eee/999?text=Client+Photo+5'">
+                <img src="https://source.unsplash.com/400x400/?updo" alt="Salon work 6" onerror="this.src='https://placehold.co/400x400/eee/999?text=Client+Photo+6'">
+                <img src="https://source.unsplash.com/400x600/?curly,hair" alt="Salon work 7" onerror="this.src='https://placehold.co/400x600/eee/999?text=Client+Photo+7'">
+                <img src="https://source.unsplash.com/400x450/?mens,haircut" alt="Salon work 8" onerror="this.src='https://placehold.co/400x450/eee/999?text=Client+Photo+8'">
+            </div>
+        </section>
+
+        <!-- 5. About Us -->
+        <section id="about" class="container">
+            <h2>Meet the Artists Behind the Craft</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://source.unsplash.com/600x450/?salon,team" alt="Salon team or owner" onerror="this.src='https://placehold.co/600x450/2c2c2c/ffffff?text=Our+Team'">
+                </div>
+                <div class="about-text">
+                    <h3>Our Philosophy</h3>
+                    <p>Founded by Olivia Rae, Radiance Salon is built on a passion for artistry and genuine client care. We believe that great hair is a form of self-expression, and our mission is to help you find the look that makes you feel your most confident self.</p>
+                    <p>Our team is dedicated to continuous education, mastering the latest techniques to bring you modern, wearable, and beautiful results.</p>
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; margin-top: 3rem;">Meet Our Stylists</h3>
+            <div class="stylist-grid">
+                <div class="stylist-card">
+                    <img src="https://source.unsplash.com/200x200/?woman,portrait,professional" alt="Stylist Anna" onerror="this.src='https://placehold.co/200x200/eee/999?text=Anna'">
+                    <h4>Anna</h4>
+                    <p>Master Colorist</p>
+                </div>
+                <div class="stylist-card">
+                    <img src="https://source.unsplash.com/200x200/?man,portrait,professional" alt="Stylist Mark" onerror="this.src='https://placehold.co/200x200/eee/999?text=Mark'">
+                    <h4>Mark</h4>
+                    <p>Lead Stylist</p>
+                </div>
+                <div class="stylist-card">
+                    <img src="https://source.unsplash.com/200x200/?person,portrait,professional" alt="Stylist Jenna" onerror="this.src='https://placehold.co/200x200/eee/999?text=Jenna'">
+                    <h4>Jenna</h4>
+                    <p>Extension Specialist</p>
+                </div>
+                <div class="stylist-card">
+                    <img src="https://source.unsplash.com/200x200/?male,portrait,professional" alt="Stylist Carlos" onerror="this.src='https://placehold.co/200x200/eee/999?text=Carlos'">
+                    <h4>Carlos</h4>
+                    <p>Creative Cuts</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Social Proof (Testimonials) -->
+        <section id="testimonials">
+            <div class="container">
+                <h2>What Our Clients Are Saying</h2>
+                <div class="slider">
+                    <div class="slide active">
+                        <blockquote>"This was the best salon experience I've ever had. Anna listened to exactly what I wanted and my color is flawless. I've already booked my next appointment!"</blockquote>
+                        <footer>- Sarah K.</footer>
+                    </div>
+                    <div class="slide">
+                        <blockquote>"A beautiful, clean, and welcoming salon. The entire team is professional and incredibly talented. I walked out feeling like a new person."</blockquote>
+                        <footer>- Michael B.</footer>
+                    </div>
+                    <div class="slide">
+                        <blockquote>"I came in for a complete change (balayage and a bob with Mark) and I am obsessed with the results. Thank you for making my hair dreams come true!"</blockquote>
+                        <footer>- Emily T.</footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact & Booking -->
+        <section id="contact" class="container">
+            <h2>Book Your Appointment</h2>
+            
+            <div class="contact-main-grid">
+                
+                <!-- Left Column: Contact Form -->
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Please select a service</option>
+                                <option value="cut">Precision Cut & Styling</option>
+                                <option value="color">Expert Color & Balayage</option>
+                                <option value="treatment">Luxury Treatment</option>
+                                <option value="bridal">Bridal & Special Occasion</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Right Column: Booking & Info -->
+                <div class="contact-info-container">
+                    <h3>Booking & Info</h3>
+                    
+                    <div class="contact-column">
+                        <h3>Book Online</h3>
+                        <p>The easiest and fastest way to book. Secure your spot 24/7.</p>
+                        <!-- Link this button to your booking software -->
+                        <a href="#" class="cta-button">Book Online Now</a>
+                    </div>
+                    
+                    <div class="contact-column">
+                        <h3>Visit or Call Us</h3>
+                        <ul>
+                            <li><strong>Phone:</strong> (555) 123-4567</li>
+                            <li><strong>Email:</strong> hello@radiancesalon.com</li>
+                            <li><strong>Address:</strong> 123 Style Ave, SoHo, New York, NY</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-column">
+                        <h3>Our Hours</h3>
+                        <ul>
+                            <li><strong>Tues - Fri:</strong> 9:00 AM - 7:00 PM</li>
+                            <li><strong>Saturday:</strong> 9:00 AM - 5:00 PM</li>
+                            <li><strong>Sun - Mon:</strong> Closed</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div> <!-- .contact-main-grid -->
+            
+            <div class="map-container">
+                <!-- 
+                  Embedded Google Map for a generic SoHo, NY location.
+                  You can replace this with your own business's embed code.
+                -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12097.433213460938!2d-74.00838483955077!3d40.7208832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a1e11e335%3A0x738d718b14e6a88!2sSoHo%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1678886911363!5m2!1sen!2sus" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="#home" class="logo">
+                        <!-- Embedded SVG Logo -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21.928 5.688a1.5 1.5 0 0 0-2.121 0l-7.387 7.387a.75.75 0 0 1-1.06 0L4.04 5.688a1.5 1.5 0 0 0-2.121 2.121l7.32 7.32a3.75 3.75 0 0 0 5.304 0l7.385-7.385a1.5 1.5 0 0 0 0-2.121ZM9.31 16.516a5.25 5.25 0 1 0-7.424 0 5.25 5.25 0 0 0 7.424 0Zm-1.06-1.06a3.75 3.75 0 1 1-5.304-5.303 3.75 3.75 0 0 1 5.304 5.303Zm6.5 1.06a5.25 5.25 0 1 0-7.424 0 5.25 5.25 0 0 0 7.424 0Zm-1.06-1.06a3.75 3.75 0 1 1-5.304-5.303 3.75 3.75 0 0 1 5.304 5.303Z"/>
+                        </svg>
+                        <span class="logo-text">Radiance</span>
+                    </a>
+                    <p>Defining style in SoHo, New York since 2018.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <p>See our latest work on Instagram.</p>
+                    <div class="social-icons">
+                        <!-- Embedded SVG Icons -->
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.669 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.669-4.771 4.919-4.919 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 0C5.373 0 0 5.373 0 12c0 5.104 3.167 9.423 7.545 11.176-.05-.462-.092-1.284.02-1.84.13-.645.836-3.55.836-3.55s-.217-.433-.217-1.073c0-1.005.582-1.76 1.31-1.76.615 0 .914.463.914 1.02s-.39 1.58-.592 2.443c-.16.71.353 1.29 1.05 1.29 1.26 0 2.228-1.336 2.228-3.25 0-1.528-1.06-2.584-2.7-2.584-1.944 0-3.064 1.458-3.064 2.872 0 .54.197 1.12.44 1.448.05.07.06.12.043.188-.06.21-.197.8-.236.96-.05.21-.24.285-.45.188-1.32-.614-2.14-2.544-2.14-4.21 0-2.28 1.66-4.566 4.9-4.566 2.58 0 4.29 1.83 4.29 4.1 0 2.56-1.46 4.58-3.5 4.58-1.15 0-2.03-.94-1.77-2.07.29-1.28.87-2.65.87-3.57 0-.74-.42-1.36-1.28-1.36-.98 0-1.78.99-1.78 2.2 0 .84.3 1.44.3 1.44s-1.03 4.34-1.22 5.13c-.34 1.41-.06 3.1 0 4.22.03.32.37.4 0 .02-.07-.76-.09-1.44-.04-2.12.03-.4.2-1.08.2-1.08s.45 1.83.45 1.83c.3 1.28 1.82 2.3 3.2 2.3 2.58 0 4.6-2.6 4.6-6.1 0-2.2-.9-3.8-2.5-3.8-1.1 0-1.8.8-1.8 1.7 0 .7.2 1.3.5 1.7s.5 1 .5 1.4c0 .5-.2 1-.5 1.3-.4.5-1 1-1 2.3s.7 1.8 2.3 1.8c2.7 0 4.1-3 4.1-5.6 0-3-2.1-5.6-5.8-5.6-3.9 0-6.7 3-6.7 6.2 0 1.2.4 2.4 1 3.2.1.1.2.2.2.3 0 .1-.1.5-.1.6 0 .2-.2.3-.3.3-1 0-2.4-1.3-2.4-3.1 0-2 1.4-4 4-4 2.3 0 4.3 1.7 4.3 4.2 0 2.4-1.4 4.5-3.8 4.5-1.3 0-2.3-1-2-2.4.3-1.6.8-3.3.8-4.3 0-1-.4-1.8-1.3-1.8-1 0-2 1-2 2.3 0 .8.3 1.4.3 1.4s-1.3 5.4-1.5 6.3c-.4 1.8-.1 3.8.1 5.6.1.7.5 1 1.2 1 .1 0 .2 0 .3-.1 1-1 1.6-2.5 1.8-3.4 0 0 .6-2.3.8-3.1.2-.8.8-1.6 1.4-1.6.7 0 1.2.5 1.2 1.4 0 1-.4 2.3-.6 3.1-.2 1-.7 2-1.7 2.6-.3.2-.6.3-.8.3-1 0-1.8-.7-1.7-1.7 0-.7.3-1.3.5-1.8.2-.5.5-1.1.5-1.6 0-.5-.2-1-.5-1.3-.4-.5-1-1-1-2.3S11.4 6 13 6c2.7 0 4.1 3 4.1 5.6 0 2.4-1.4 4.5-3.8 4.5-1.3 0-2.3-1-2-2.4C11.6 12.2 12 11 12 10c0-1-.4-1.8-1.3-1.8-1 0-2 1-2 2.3 0 .8.3 1.4.3 1.4s-1.3 5.4-1.5 6.3C7.1 20.3 7 22.3 7 24c-1.5-.5-2.8-1.3-4-2.4C1.2 19.8 0 16 0 12 0 5.4 5.4 0 12 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Radiance Salon. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- All JavaScript is in this <script> tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- Mobile Menu Toggle ---
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const closeMenu = document.getElementById('closeMenu');
+            const navLinks = document.getElementById('navLinks');
+            const navLinksItems = navLinks.querySelectorAll('a');
+
+            function toggleMenu() {
+                navLinks.classList.toggle('active');
+            }
+
+            hamburgerMenu.addEventListener('click', toggleMenu);
+            closeMenu.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // --- Testimonial Slider ---
+            const slides = document.querySelectorAll('.slider .slide');
+            let currentSlide = 0;
+            const slideInterval = 5000; // 5 seconds
+
+            function nextSlide() {
+                if (slides.length === 0) return; // Don't run if there are no slides
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            // Initialize slider
+            if (slides.length > 0) {
+                slides[currentSlide].classList.add('active');
+                // Auto-rotate slides
+                setInterval(nextSlide, slideInterval);
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Boxes Effect</title>
+    <!-- We'll use the Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A little bit of custom CSS for a smooth transition on the box glow effect */
+        .grid-box {
+            transition: background-color 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 flex items-center justify-center min-h-screen p-4 font-sans">
+
+    <!-- 
+      This is the main container, equivalent to your React component's root div.
+      I've made it responsive with w-full and max-w-2xl.
+    -->
+    <div id="interactive-container" class="h-96 relative w-full max-w-2xl overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+        
+        <!-- This div is for the dynamic background grid, which will be populated by JavaScript -->
+        <div id="boxes-grid" class="absolute inset-0 h-full w-full z-10"></div>
+        
+        <!-- This div creates the radial gradient mask overlay to fade the edges -->
+        <div class="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none"></div>
+        
+        <!-- This is the content that appears on top of the background -->
+        <h1 class="md:text-4xl text-xl text-white relative z-20">
+            Background Boxes
+        </h1>
+        <p class="text-center mt-2 text-neutral-300 relative z-20">
+            Interactive grid with hover animations.
+        </p>
+    </div>
+
+    <script>
+        // Get the container for the boxes
+        const boxesGrid = document.getElementById('boxes-grid');
+        const interactiveContainer = document.getElementById('interactive-container');
+        
+        // --- Configuration ---
+        const boxSize = 30; // The size of each square box in pixels
+        const glowRadius = 6; // How far the glow effect should extend from the cursor
+        const glowColor = 'rgba(34, 197, 94, 0.8)'; // The color of the glow (a nice green)
+
+        let cols, rows;
+
+        // --- Function to create the grid of boxes ---
+        function createGrid() {
+            // Clear any existing boxes to handle resizing
+            boxesGrid.innerHTML = '';
+
+            // Calculate columns and rows based on container size and box size
+            cols = Math.ceil(boxesGrid.offsetWidth / boxSize);
+            rows = Math.ceil(boxesGrid.offsetHeight / boxSize);
+            
+            // Apply grid styles to the container
+            boxesGrid.style.display = 'grid';
+            boxesGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+            boxesGrid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+
+            // Create each box and append it to the grid container
+            for (let i = 0; i < cols * rows; i++) {
+                const box = document.createElement('div');
+                // These classes define the look of each grid cell
+                box.className = 'grid-box border-r border-t border-slate-700/50';
+                boxesGrid.appendChild(box);
+            }
+        }
+        
+        // --- Event Listeners ---
+
+        // Create the grid when the page first loads
+        createGrid();
+        
+        // Recreate the grid on window resize to make it responsive
+        window.addEventListener('resize', createGrid);
+
+        // --- Mouse Move Interaction ---
+        interactiveContainer.addEventListener('mousemove', (e) => {
+            const allBoxes = document.querySelectorAll('.grid-box');
+            
+            // Get mouse position relative to the container
+            const rect = interactiveContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Calculate which column and row the mouse is currently over
+            const hoveredCol = Math.floor(x / boxSize);
+            const hoveredRow = Math.floor(y / boxSize);
+            
+            // Iterate over all boxes to apply the glowing effect
+            allBoxes.forEach((box, index) => {
+                const col = index % cols;
+                const row = Math.floor(index / cols);
+                
+                // Calculate the distance from the hovered box
+                const distance = Math.sqrt(
+                    Math.pow(col - hoveredCol, 2) + Math.pow(row - hoveredRow, 2)
+                );
+                
+                // Calculate opacity based on distance. Closer boxes are more opaque.
+                const opacity = Math.max(0, 1 - distance / glowRadius);
+
+                // Apply the style. We parse the glowColor and apply the new opacity.
+                const colorParts = glowColor.match(/(\d+\.?\d*)/g);
+                if (colorParts.length === 4) {
+                     box.style.backgroundColor = `rgba(${colorParts[0]}, ${colorParts[1]}, ${colorParts[2]}, ${opacity * parseFloat(colorParts[3])})`;
+                }
+            });
+        });
+
+        // --- Mouse Leave Interaction ---
+        interactiveContainer.addEventListener('mouseleave', () => {
+             const allBoxes = document.querySelectorAll('.grid-box');
+             allBoxes.forEach(box => {
+                // Fade the background color back to transparent
+                box.style.backgroundColor = 'transparent';
+             });
+        });
+
+    </script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for dropdown animations */
+        .dropdown-content {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+        }
+        
+        .dropdown:hover .dropdown-content,
+        .dropdown.active .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* Add focus styles for accessibility */
+        .nav-link:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        
+        /* Custom scrollbar for mobile menu */
+        .mobile-menu::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .mobile-menu::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        .mobile-menu::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        
+        .mobile-menu::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 px-4 md:px-6">
+        <div class="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between gap-4">
+            <!-- Left side -->
+            <div class="flex items-center gap-2">
+                <!-- Mobile menu trigger -->
+                <button id="mobile-menu-toggle" class="md:hidden group h-9 w-9 hover:bg-accent hover:text-accent-foreground rounded-md flex items-center justify-center">
+                    <div class="hamburger w-5 h-5 flex flex-col justify-center space-y-1">
+                        <span class="hamburger-line block h-0.5 w-5 bg-current"></span>
+                        <span class="hamburger-line block h-0.5 w-5 bg-current"></span>
+                        <span class="hamburger-line block h-0.5 w-5 bg-current"></span>
+                    </div>
+                </button>
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2 text-primary hover:text-primary/90 transition-colors">
+                    <svg width='24' height='24' viewBox='0 0 324 323' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+                        <rect
+                            x='88.1023'
+                            y='144.792'
+                            width='151.802'
+                            height='36.5788'
+                            rx='18.2894'
+                            transform='rotate(-38.5799 88.1023 144.792)'
+                            fill='currentColor'
+                        />
+                        <rect
+                            x='85.3459'
+                            y='244.537'
+                            width='151.802'
+                            height='36.5788'
+                            rx='18.2894'
+                            transform='rotate(-38.5799 85.3459 244.537)'
+                            fill='currentColor'
+                        />
+                    </svg>
+                    <span class="hidden font-bold text-xl sm:inline-block">shadcn.io</span>
+                </a>
+                
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex">
+                    <ul class="flex gap-1">
+                        <!-- Home Link -->
+                        <li>
+                            <a href="#" class="nav-link group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                                Home
+                            </a>
+                        </li>
+                        
+                        <!-- Features Dropdown -->
+                        <li class="dropdown relative">
+                            <button class="nav-link group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                                Features
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative top-[1px] ml-1 h-3 w-3">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="dropdown-content absolute left-0 top-full mt-1 w-[400px] rounded-md border bg-popover text-popover-foreground shadow-md md:w-[500px] lg:w-[500px]">
+                                <div class="grid gap-3 p-4 lg:grid-cols-[.75fr_1fr]">
+                                    <div class="row-span-3">
+                                        <a href="#" class="flex h-full w-full select-none flex-col justify-center items-center text-center rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                                            <div class="mb-3 text-xl font-medium">
+                                                shadcn.io
+                                            </div>
+                                            <p class="text-sm leading-tight text-muted-foreground">
+                                                Beautifully designed components built with Radix UI and Tailwind CSS.
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="text-base font-medium leading-none">Components</div>
+                                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                            Browse all components in the library.
+                                        </p>
+                                    </a>
+                                    <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="text-base font-medium leading-none">Documentation</div>
+                                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                            Learn how to use the library.
+                                        </p>
+                                    </a>
+                                    <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="text-base font-medium leading-none">Templates</div>
+                                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                            Pre-built layouts for common use cases.
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Pricing Dropdown -->
+                        <li class="dropdown relative">
+                            <button class="nav-link group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                                Pricing
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative top-[1px] ml-1 h-3 w-3">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="dropdown-content absolute left-0 top-full mt-1 w-[400px] rounded-md border bg-popover text-popover-foreground shadow-md md:w-[500px] lg:w-[600px]">
+                                <div class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                    <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="text-base font-medium leading-none">Product A</div>
+                                    </a>
+                                    <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="text-base font-medium leading-none">Product B</div>
+                                    </a>
+                                    <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="text-base font-medium leading-none">Product C</div>
+                                    </a>
+                                    <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="text-base font-medium leading-none">Product D</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- About Dropdown -->
+                        <li class="dropdown relative">
+                            <button class="nav-link group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                                About
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative top-[1px] ml-1 h-3 w-3">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="dropdown-content absolute left-0 top-full mt-1 w-[400px] rounded-md border bg-popover text-popover-foreground shadow-md">
+                                <div class="grid w-[400px] gap-3 p-4">
+                                    <a href="#" class="flex items-start space-x-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <div class="text-base font-medium leading-tight">Getting Started</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-start space-x-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                            </svg>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <div class="text-base font-medium leading-tight">Tutorials</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-start space-x-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <div class="text-base font-medium leading-tight">About Us</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Right side -->
+            <div class="flex items-center gap-3">
+                <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-3">
+                    Sign In
+                </button>
+                <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 z-40 h-full w-64 bg-white shadow-lg md:hidden">
+        <div class="flex h-16 items-center justify-between px-4 border-b">
+            <a href="#" class="flex items-center space-x-2 text-primary">
+                <svg width='24' height='24' viewBox='0 0 324 323' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+                    <rect
+                        x='88.1023'
+                        y='144.792'
+                        width='151.802'
+                        height='36.5788'
+                        rx='18.2894'
+                        transform='rotate(-38.5799 88.1023 144.792)'
+                        fill='currentColor'
+                    />
+                    <rect
+                        x='85.3459'
+                        y='244.537'
+                        width='151.802'
+                        height='36.5788'
+                        rx='18.2894'
+                        transform='rotate(-38.5799 85.3459 244.537)'
+                        fill='currentColor'
+                    />
+                </svg>
+                <span class="font-bold text-xl">shadcn.io</span>
+            </a>
+            <button id="mobile-menu-close" class="h-9 w-9 hover:bg-accent hover:text-accent-foreground rounded-md flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="p-4 overflow-y-auto h-full pb-20">
+            <ul class="space-y-2">
+                <!-- Home Link -->
+                <li>
+                    <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                        Home
+                    </a>
+                </li>
+                
+                <!-- Features Dropdown -->
+                <li>
+                    <div class="text-muted-foreground px-2 py-1.5 text-xs font-medium">
+                        Features
+                    </div>
+                    <ul class="space-y-1 pl-2">
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                Components
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                Documentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                Templates
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Pricing Dropdown -->
+                <li>
+                    <div class="text-muted-foreground px-2 py-1.5 text-xs font-medium">
+                        Pricing
+                    </div>
+                    <ul class="space-y-1 pl-2">
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                Product A
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                Product B
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                Product C
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                Product D
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- About Dropdown -->
+                <li>
+                    <div class="text-muted-foreground px-2 py-1.5 text-xs font-medium">
+                        About
+                    </div>
+                    <ul class="space-y-1 pl-2">
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                Tutorials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                                About Us
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Sign In and Get Started buttons -->
+                <li class="pt-4 border-t">
+                    <a href="#" class="flex w-full items-center justify-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground mb-2">
+                        Sign In
+                    </a>
+                    <a href="#" class="flex w-full items-center justify-center rounded-md bg-primary text-primary-foreground px-3 py-2 text-sm font-medium hover:bg-primary/90">
+                        Get Started
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Overlay for mobile menu -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-30 bg-black/50 hidden md:hidden"></div>
+    
+    <!-- Demo Content -->
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+        <h1 class="text-3xl font-bold mb-6">Navigation Bar Demo</h1>
+        <p class="text-lg mb-4">This is a demo page showcasing the navigation bar component. The navigation bar includes:</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+            <li>Responsive design with mobile menu</li>
+            <li>Dropdown menus with different layouts (description, simple, icon)</li>
+            <li>Smooth animations and transitions</li>
+            <li>Accessibility features</li>
+            <li>Sign In and Get Started buttons</li>
+        </ul>
+        <p>Try resizing your browser window to see the responsive behavior. On smaller screens, the navigation menu will collapse into a hamburger menu.</p>
+    </div>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const hamburger = document.querySelector('.hamburger');
+        
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            mobileMenuOverlay.classList.remove('hidden');
+            hamburger.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            mobileMenuOverlay.classList.add('hidden');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        mobileMenuToggle.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // Dropdown menu functionality for desktop
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        // Handle keyboard navigation for dropdowns
+        dropdowns.forEach(dropdown => {
+            const button = dropdown.querySelector('button');
+            
+            button.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+        
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (window.innerWidth >= 768) {
+                    closeMobileMenu();
+                }
+            }, 250);
+        });
+        
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

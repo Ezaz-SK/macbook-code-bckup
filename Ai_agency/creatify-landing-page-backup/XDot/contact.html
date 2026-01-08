@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Creatify Agency</title>
+    <meta name="description" content="Get in touch with Creatify Agency. Let's transform your vision into a remarkable brand, website, or AI product.">
+    <meta name="keywords" content="contact, digital agency, web development, AI solutions, UI/UX design">
+    <meta name="author" content="Creatify Agency">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us - Creatify Agency">
+    <meta property="og:description" content="Transforming visions into remarkable digital experiences">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://creatify.agency/contact">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - Creatify Agency">
+    <meta name="twitter:description" content="AI-powered digital transformation agency">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #000000;">
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" class="logo-text">Xdot</a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="work.html" class="nav-link">Works</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav-contact">
+                    <button class="simple-btn" id="simpleBtn" aria-label="Get in touch with us">
+                        Get in touch
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero-section">
+            <div class="contact-hero-content">
+                <div class="contact-hero-text">
+                    <h1 class="contact-title">
+                        Let's Create Something
+                        <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Remarkable</span>
+                        Together
+                    </h1>
+                    <p class="contact-subtitle">
+                        Ready to transform your vision into a digital masterpiece? Whether it's an innovative AI solution,
+                        a stunning web application, or a complete brand transformation, we're here to make it happen.
+                    </p>
+                </div>
+
+                <div class="contact-form-container">
+                    <div class="contact-form-card">
+                        <div class="form-header">
+                            <h2 class="form-title">Start Your Project</h2>
+                            <p class="form-description">Tell us about your vision and we'll craft the perfect solution</p>
+                        </div>
+
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                            <!-- Web3Forms Access Key (Replace with your actual key) -->
+                            <input type="hidden" name="access_key" value="711612f6-ee45-43b4-8f8f-0199ed0e038e">
+                            <input type="hidden" name="subject" value="New Contact Form Submission - Creatify Agency">
+                            <input type="hidden" name="from_name" value="Creatify Agency Contact Form">
+
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    class="form-input"
+                                    placeholder="Your full name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-input"
+                                    placeholder="your.email@example.com"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    class="form-textarea"
+                                    placeholder="Tell us about your project..."
+                                    rows="6"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="submit-btn" id="submitBtn">
+                                    <span class="btn-text">Send Message</span>
+                                    <div class="btn-loader" id="btnLoader"></div>
+                                </button>
+                            </div>
+
+                            <!-- Success/Error Messages -->
+                            <div class="form-message" id="formMessage"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section class="contact-info-section">
+            <div class="container mx-auto px-4">
+                <div class="contact-info-grid">
+                    <div class="contact-info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="info-title">Email Us</h3>
+                        <p class="info-text">hello@creatify.agency</p>
+                        <button class="copy-btn" data-copy="hello@creatify.agency">
+                            <span class="copy-text">Copy Email</span>
+                            <span class="copied-text">Copied!</span>
+                        </button>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 6l-9.5 9.5-5-5L0 17l23-5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="info-title">Response Time</h3>
+                        <p class="info-text">Within 24 hours</p>
+                        <p class="info-subtext">We typically respond to all inquiries within one business day</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="info-title">Location</h3>
+                        <p class="info-text">Global Digital Agency</p>
+                        <p class="info-subtext">Serving clients worldwide with remote collaboration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 Xdot Agency. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Instagram</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.querySelector('.btn-text');
+            const btnLoader = document.getElementById('btnLoader');
+            const formMessage = document.getElementById('formMessage');
+
+            // Copy email functionality
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const email = this.dataset.copy;
+                    navigator.clipboard.writeText(email).then(() => {
+                        this.classList.add('copied');
+                        setTimeout(() => {
+                            this.classList.remove('copied');
+                        }, 2000);
+                    });
+                });
+            });
+
+            // Form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Show loading state
+                submitBtn.disabled = true;
+                btnText.textContent = 'Sending...';
+                btnLoader.style.display = 'block';
+                formMessage.innerHTML = '';
+
+                // Prepare form data
+                const formData = new FormData(this);
+
+                // Submit form
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Success
+                        formMessage.innerHTML = '<div class="success-message">Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.</div>';
+                        contactForm.reset();
+                    } else {
+                        // Error
+                        formMessage.innerHTML = '<div class="error-message">Sorry, there was an error sending your message. Please try again or contact us directly.</div>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Form submission error:', error);
+                    formMessage.innerHTML = '<div class="error-message">Network error. Please check your connection and try again.</div>';
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    btnText.textContent = 'Send Message';
+                    btnLoader.style.display = 'none';
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

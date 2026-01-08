@@ -1,0 +1,904 @@
+<!-- Green Power - Production Ready Landing Page -->
+<!-- For production deployment, consider using a build process to optimize Tailwind CSS -->
+<!-- Last updated: 2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Power - Renewable Energy Solutions</title>
+    <meta name="description" content="Leading renewable energy solutions provider with 15+ years of experience. Solar panels, wind turbines, and hydropower systems for residential and commercial clients.">
+    <meta name="keywords" content="renewable energy, solar panels, wind turbines, hydropower, green energy, sustainable solutions">
+    <meta name="author" content="Green Power">
+    <meta property="og:title" content="Green Power - Renewable Energy Solutions">
+    <meta property="og:description" content="Leading renewable energy solutions provider with 15+ years of experience. Get sustainable energy solutions today.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://greenpower.com/">
+    <!-- Production Note: For optimal performance, consider using a build process to purge unused Tailwind CSS -->
+    <!-- See: https://tailwindcss.com/docs/optimizing-for-production -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'green-primary': '#10B981',
+                        'green-secondary': '#059669',
+                        'green-light': '#D1FAE5',
+                        'green-dark': '#047857'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'bounce-slow': 'bounce 2s infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #10B981 0%, #047857 100%);
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-xl sticky top-0 z-50 backdrop-blur-sm bg-white/95">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center group cursor-pointer">
+                    <div class="text-3xl font-bold text-green-primary group-hover:text-green-secondary transition-all duration-300">
+                        <i class="fas fa-leaf mr-3 animate-bounce-slow"></i>
+                        Green Power
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-1">
+                    <a href="#home" class="relative text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-all duration-300 group">
+                        <span class="relative z-10">Home</span>
+                        <div class="absolute inset-0 bg-green-light rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </a>
+                    <a href="#about" class="relative text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-all duration-300 group">
+                        <span class="relative z-10">About</span>
+                        <div class="absolute inset-0 bg-green-light rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </a>
+                    <a href="#service" class="relative text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-all duration-300 group">
+                        <span class="relative z-10">Service</span>
+                        <div class="absolute inset-0 bg-green-light rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </a>
+                    <a href="#benefits" class="relative text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-all duration-300 group">
+                        <span class="relative z-10">Benefits</span>
+                        <div class="absolute inset-0 bg-green-light rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </a>
+                    <a href="#portfolio" class="relative text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-all duration-300 group">
+                        <span class="relative z-10">Portfolio</span>
+                        <div class="absolute inset-0 bg-green-light rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </a>
+                    <a href="#contact" class="relative text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-all duration-300 group">
+                        <span class="relative z-10">Contact Us</span>
+                        <div class="absolute inset-0 bg-green-light rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </a>
+                    <a href="#registration" class="gradient-bg text-white px-6 py-3 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 font-semibold">
+                        <i class="fas fa-rocket mr-2"></i>Registration
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 hover:text-green-primary transition-colors p-2" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="#home" class="text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-colors">About</a>
+                    <a href="#service" class="text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-colors">Service</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-colors">Benefits</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-colors">Portfolio</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-primary px-4 py-2 rounded-lg transition-colors">Contact Us</a>
+                    <a href="#registration" class="gradient-bg text-white px-4 py-2 rounded-lg text-center font-semibold">Registration</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen bg-cover bg-center overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80');">
+        <!-- Animated background overlay -->
+        <div class="absolute inset-0 hero-overlay"></div>
+
+        <!-- Subtle background elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/4 w-1 h-1 bg-white rounded-full opacity-30"></div>
+            <div class="absolute top-1/3 right-1/4 w-1 h-1 bg-green-primary rounded-full opacity-20" style="animation-delay: 1s;"></div>
+        </div>
+
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <div class="text-center text-white px-6 animate-fade-in">
+                <div class="mb-6">
+                    <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
+                        <i class="fas fa-leaf text-green-primary mr-2"></i>
+                        100% Renewable Energy Solutions
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    Power Your Future with
+                    <span class="block text-green-primary relative">
+                        <span class="relative z-10">Green Energy</span>
+                        
+                    </span>
+                </h1>
+
+                <p class="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
+                    Harness the power of renewable energy sources to create a sustainable future for generations to come. Join the green revolution today.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button class="group gradient-bg text-white text-lg px-8 py-4 rounded-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 font-semibold flex items-center">
+                        <i class="fas fa-rocket mr-3 group-hover:animate-bounce"></i>
+                        Get Started Today
+                        <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+
+                    <button class="group bg-white/10 backdrop-blur-sm text-white text-lg px-8 py-4 rounded-xl border-2 border-white/30 hover:bg-white/20 transition-all duration-300 font-semibold flex items-center">
+                        <i class="fas fa-play mr-3 group-hover:animate-pulse"></i>
+                        Watch Demo
+                    </button>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
+                    <div class="text-center group">
+                        <div class="text-3xl md:text-4xl font-bold text-green-primary mb-2 group-hover:scale-110 transition-transform">15+</div>
+                        <div class="text-sm opacity-80">Years Experience</div>
+                    </div>
+                    <div class="text-center group">
+                        <div class="text-3xl md:text-4xl font-bold text-green-primary mb-2 group-hover:scale-110 transition-transform">10K+</div>
+                        <div class="text-sm opacity-80">Happy Customers</div>
+                    </div>
+                    <div class="text-center group">
+                        <div class="text-3xl md:text-4xl font-bold text-green-primary mb-2 group-hover:scale-110 transition-transform">500+</div>
+                        <div class="text-sm opacity-80">Projects Done</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl opacity-70"></i>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-green-light rounded-full opacity-5 transform translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-slide-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-leaf text-white text-xl"></i>
+                        </div>
+                        <span class="text-green-primary font-semibold text-lg">About Green Power</span>
+                    </div>
+
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                        Leading the <span class="text-green-primary">Green Revolution</span> for 15+ Years
+                    </h2>
+
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        With over 15 years of experience in renewable energy solutions, Green Power has been at the forefront of the green revolution. We specialize in providing comprehensive solar, wind, and hydropower solutions for residential and commercial clients worldwide.
+                    </p>
+
+                    <!-- Rating Section -->
+                    <div class="bg-green-light p-6 rounded-xl mb-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-400 text-xl mr-4">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-gray-800 font-semibold">4.9/5 Rating</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-green-primary">10,000+</div>
+                                <div class="text-sm text-gray-600">Happy Customers</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-green-light transition-colors group">
+                            <div class="text-3xl font-bold text-green-primary mb-2 group-hover:scale-110 transition-transform">15+</div>
+                            <div class="text-gray-600 font-medium">Years Experience</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-green-light transition-colors group">
+                            <div class="text-3xl font-bold text-green-primary mb-2 group-hover:scale-110 transition-transform">10K+</div>
+                            <div class="text-gray-600 font-medium">Happy Customers</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-green-light transition-colors group">
+                            <div class="text-3xl font-bold text-green-primary mb-2 group-hover:scale-110 transition-transform">500+</div>
+                            <div class="text-gray-600 font-medium">Projects Completed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative z-10 animate-slide-up" style="animation-delay: 0.3s;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                             alt="Green Power Worker"
+                             class="rounded-2xl shadow-2xl w-full h-96 object-cover hover:shadow-3xl transition-shadow duration-300">
+                    </div>
+
+                    <!-- Floating cards -->
+                    <div class="absolute -top-4 -right-4 bg-white rounded-lg shadow-xl p-4 animate-bounce-slow z-20 border border-green-light w-48" style="animation-delay: 1s;">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg overflow-hidden mr-3 flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2342&q=80"
+                                     alt="Solar Panel Installation"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-800 text-sm">Solar Installation</div>
+                                <div class="text-xs text-gray-600">Professional Service</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-xl p-4 animate-bounce-slow z-20 border border-green-light w-48" style="animation-delay: 2s;">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg overflow-hidden mr-3 flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                                     alt="Solar Farm"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-800 text-sm">Solar Farm</div>
+                                <div class="text-xs text-gray-600">Large Scale Projects</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="service" class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute top-20 left-0 w-48 h-48 bg-green-primary rounded-full opacity-3"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-fade-in">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-16 h-16 bg-green-primary rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-800">Our Services</h2>
+                </div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We offer comprehensive renewable energy solutions tailored to meet your specific needs and help you transition to clean, sustainable power with cutting-edge technology.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Residential Solar -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 animate-slide-up">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2342&q=80"
+                             alt="Residential Solar Panel"
+                             class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-green-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 right-4 w-12 h-12 bg-green-primary rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <i class="fas fa-solar-panel text-white text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-light rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-home text-green-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-green-primary transition-colors">Residential Solar</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Complete solar panel installation for homes, including system design, installation, and maintenance services with 25-year warranty.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-primary mr-3 text-sm"></i>
+                                <span>Custom system design</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-primary mr-3 text-sm"></i>
+                                <span>Professional installation</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-primary mr-3 text-sm"></i>
+                                <span>Maintenance & support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hydropower System -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                             alt="Hydropower System"
+                             class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-green-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 right-4 w-12 h-12 bg-green-primary rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <i class="fas fa-water text-white text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-light rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-tint text-green-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-green-primary transition-colors">Hydropower System</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Harness the power of flowing water with our advanced hydropower systems for reliable renewable energy generation.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-primary mr-3 text-sm"></i>
+                                <span>Site assessment</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-primary mr-3 text-sm"></i>
+                                <span>System installation</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-primary mr-3 text-sm"></i>
+                                <span>Performance monitoring</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Wind Turbine -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                             alt="Wind Turbine"
+                             class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-green-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 right-4 w-12 h-12 bg-green-primary rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <i class="fas fa-wind text-white text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-light rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-fan text-green-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-green-primary transition-colors">Wind Turbine</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            State-of-the-art wind turbines designed for maximum efficiency and minimal environmental impact with smart grid integration.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-primary mr-3 text-sm"></i>
+                                <span>High-efficiency turbines</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-primary mr-3 text-sm"></i>
+                                <span>Quiet operation</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-primary mr-3 text-sm"></i>
+                                <span>Remote monitoring</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio & Testimonials Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                    Success Stories & <span class="text-green-primary">Portfolio</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Discover how we've helped thousands of customers transition to renewable energy and see our latest projects in action.
+                </p>
+            </div>
+
+            <!-- Project Showcase -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                         alt="Solar Farm Project"
+                         class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-2">
+                            <div class="w-8 h-8 bg-green-primary rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-solar-panel text-sm"></i>
+                            </div>
+                            <span class="font-semibold">Solar Farm - California</span>
+                        </div>
+                        <p class="text-sm opacity-90">5MW solar installation completed in 2023</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                         alt="Wind Farm Project"
+                         class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-2">
+                            <div class="w-8 h-8 bg-green-primary rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-wind text-sm"></i>
+                            </div>
+                            <span class="font-semibold">Wind Farm - Texas</span>
+                        </div>
+                        <p class="text-sm opacity-90">25 turbine installation with smart grid integration</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                         alt="Hydro Project"
+                         class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-2">
+                            <div class="w-8 h-8 bg-green-primary rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-water text-sm"></i>
+                            </div>
+                            <span class="font-semibold">Hydro Plant - Oregon</span>
+                        </div>
+                        <p class="text-sm opacity-90">Small-scale hydropower system for local community</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Testimonials -->
+            <div class="bg-green-light rounded-3xl p-8 lg:p-12">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">What Our Customers Say</h3>
+                    <div class="flex justify-center text-yellow-400 text-xl mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">4.9/5 from 10,000+ satisfied customers</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80"
+                                 alt="Customer"
+                                 class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <div class="font-semibold text-gray-800">Sarah Johnson</div>
+                                <div class="text-sm text-gray-600">Homeowner</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"Green Power transformed our home with solar panels. Our energy bills dropped by 70% and we feel great about reducing our carbon footprint!"</p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80"
+                                 alt="Customer"
+                                 class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <div class="font-semibold text-gray-800">Michael Chen</div>
+                                <div class="text-sm text-gray-600">Business Owner</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"The commercial solar installation was seamless. Green Power handled everything from permits to final inspection. Highly recommend!"</p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80"
+                                 alt="Customer"
+                                 class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <div class="font-semibold text-gray-800">Emily Rodriguez</div>
+                                <div class="text-sm text-gray-600">Farm Owner</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"The wind turbine installation has been a game-changer for our farm. We're now energy independent and selling excess power back to the grid."</p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-white relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 left-1/4 w-48 h-48 bg-green-primary rounded-full opacity-3"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-fade-in">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-16 h-16 bg-green-primary rounded-full flex items-center justify-center mr-4 animate-pulse">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-800">Why Choose <span class="text-green-primary">Green Power?</span></h2>
+                </div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Discover the numerous advantages of switching to renewable energy with Green Power's comprehensive solutions and industry-leading expertise.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Environmental -->
+                <div class="group text-center p-8 bg-gray-50 rounded-2xl hover:bg-green-light transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl animate-slide-up">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-green-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <i class="fas fa-leaf text-3xl text-white group-hover:animate-bounce"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-secondary rounded-full opacity-60 animate-ping"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 group-hover:text-green-primary transition-colors">Environmental</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Reduce your carbon footprint and contribute to a cleaner, healthier planet with our eco-friendly energy solutions and sustainable practices.
+                    </p>
+                </div>
+
+                <!-- Financial -->
+                <div class="group text-center p-8 bg-gray-50 rounded-2xl hover:bg-green-light transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl animate-slide-up" style="animation-delay: 0.1s;">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-green-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <i class="fas fa-dollar-sign text-3xl text-white group-hover:animate-bounce"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-secondary rounded-full opacity-60 animate-ping"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 group-hover:text-green-primary transition-colors">Financial</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Save money on energy bills with our cost-effective renewable energy systems and take advantage of government incentives and tax credits.
+                    </p>
+                </div>
+
+                <!-- Energy Independence -->
+                <div class="group text-center p-8 bg-gray-50 rounded-2xl hover:bg-green-light transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-green-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <i class="fas fa-bolt text-3xl text-white group-hover:animate-bounce"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-secondary rounded-full opacity-60 animate-ping"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 group-hover:text-green-primary transition-colors">Energy Independence</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Generate your own power and become less dependent on traditional energy sources and fluctuating utility prices with smart energy storage.
+                    </p>
+                </div>
+
+                <!-- Reliability -->
+                <div class="group text-center p-8 bg-gray-50 rounded-2xl hover:bg-green-light transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-green-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <i class="fas fa-shield-alt text-3xl text-white group-hover:animate-bounce"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-secondary rounded-full opacity-60 animate-ping"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 group-hover:text-green-primary transition-colors">Reliability</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Enjoy consistent, reliable power with our durable systems designed for long-term performance, minimal downtime, and 24/7 monitoring.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Additional Benefits -->
+            <div class="mt-16 grid md:grid-cols-3 gap-8 animate-slide-up" style="animation-delay: 0.4s;">
+                <div class="text-center p-6 bg-green-light rounded-2xl">
+                    <div class="text-4xl font-bold text-green-primary mb-2">25+</div>
+                    <div class="text-gray-700 font-semibold">Years Warranty</div>
+                </div>
+                <div class="text-center p-6 bg-green-light rounded-2xl">
+                    <div class="text-4xl font-bold text-green-primary mb-2">24/7</div>
+                    <div class="text-gray-700 font-semibold">Expert Support</div>
+                </div>
+                <div class="text-center p-6 bg-green-light rounded-2xl">
+                    <div class="text-4xl font-bold text-green-primary mb-2">100%</div>
+                    <div class="text-gray-700 font-semibold">Satisfaction Guaranteed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Ready to make the switch to renewable energy? Get in touch with our experts today.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Get In Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-green-600 text-xl mr-4"></i>
+                            <span class="text-gray-600">123 Green Street, Eco City, EC 12345</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-green-600 text-xl mr-4"></i>
+                            <span class="text-gray-600">+1 (555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-green-600 text-xl mr-4"></i>
+                            <span class="text-gray-600">info@greenpower.com</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-green-400 mb-4">
+                        <i class="fas fa-leaf mr-2"></i>
+                        Green Power
+                    </div>
+                    <p class="text-gray-300">
+                        Leading the renewable energy revolution with innovative, sustainable solutions for a greener future.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-green-400">Residential Solar</a></li>
+                        <li><a href="#" class="hover:text-green-400">Commercial Solar</a></li>
+                        <li><a href="#" class="hover:text-green-400">Wind Turbines</a></li>
+                        <li><a href="#" class="hover:text-green-400">Hydropower</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-green-400">About Us</a></li>
+                        <li><a href="#" class="hover:text-green-400">Our Team</a></li>
+                        <li><a href="#" class="hover:text-green-400">Careers</a></li>
+                        <li><a href="#" class="hover:text-green-400">News</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-green-400 text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-green-400 text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-green-400 text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-green-400 text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Green Power. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Elements -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md', 'bg-white/90');
+                header.classList.remove('bg-white/95');
+            } else {
+                header.classList.remove('backdrop-blur-md', 'bg-white/90');
+                header.classList.add('bg-white/95');
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Counter animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start) + '+';
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target + '+';
+                }
+            }
+
+            updateCounter();
+        }
+
+        // Trigger counter animations when stats section is visible
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const stats = entry.target.querySelectorAll('.stat-number');
+                    stats.forEach(stat => {
+                        const target = parseInt(stat.dataset.target);
+                        animateCounter(stat, target);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe stats sections
+        document.querySelectorAll('.stats-section').forEach(section => {
+            statsObserver.observe(section);
+        });
+
+        // Add stagger animation to service cards
+        const serviceCards = document.querySelectorAll('#service .group');
+        serviceCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const heroSection = document.getElementById('home');
+            const heroContent = heroSection.querySelector('.animate-fade-in');
+
+            if (scrolled < window.innerHeight) {
+                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Form submission with animation
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+
+                submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Sent!';
+                submitBtn.classList.add('bg-green-500');
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.classList.remove('bg-green-500');
+                    this.reset();
+                }, 2000);
+            });
+        });
+
+        // Simplified button interactions
+        document.querySelectorAll('.gradient-bg').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.add('transform', 'scale-95');
+                setTimeout(() => {
+                    this.classList.remove('transform', 'scale-95');
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

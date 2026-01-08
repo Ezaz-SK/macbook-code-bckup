@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Sequence Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A simple font for the demo */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* =========================================
+        POPUP STYLES
+        =========================================
+        */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 100;
+            
+            /* Hidden State */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        .popup-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 101;
+            
+            /* Sober black-and-white aesthetic */
+            background-color: #000;
+            border: 1px solid #333;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+            width: 90%;
+            max-width: 460px; /* Good size for a modal */
+            
+            /* Hidden State */
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, -50%) scale(0.9);
+            transition: all 0.3s ease;
+        }
+
+        /* =========================================
+        POPUP OPEN STATE
+        =========================================
+        */
+        .popup-overlay.is-open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup-modal.is-open {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* =========================================
+        CONTENT SWAP TRANSITION
+        =========================================
+        */
+        .popup-content-wrapper {
+            transition: opacity 0.4s ease;
+        }
+        .popup-content-wrapper.fading-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <div id="popupOverlay" class="popup-overlay"></div>
+
+    <div id="popupModal" class="popup-modal">
+        
+        <button id="popupCloseBtn" class_="absolute top-3 right-4 text-gray-500 hover:text-white transition-colors" aria-label="Close modal" style="position: absolute; top: 0.75rem; right: 1rem;">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+        </button>
+
+        <div id="popupContentWrapper" class="popup-content-wrapper p-8 pt-10">
+            </div>
+
+    </div>
+
+  
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- 1. DEFINE POPUP CONTENT ---
+
+            // Content for Popup 1 (Free Sample)
+            const popup1_Content = `
+                <h2 class="text-2xl font-bold text-white mb-2">Get Your First Sample FREE</h2>
+                <p class="text-gray-400 mb-6">
+                    See our AI magic for yourself. Send us one phone picture, and we'll send it back as a professional-grade catalog shot. 100% free, no strings attached.
+                </p>
+                <a href="./contact.html" id="popupCta1" class="block w-full text-center bg-white text-black font-bold py-3 px-5 rounded hover:bg-gray-200 transition-colors">
+                    Claim Your Free Edit
+                </a>
+            `;
+
+            // Content for Popup 2 (Impulse Buy)
+            const popup2_Content = `
+                <h2 class="text-2xl font-bold text-white mb-2">⚡ Limited Time Offer</h2>
+                <p class="text-gray-400 mb-6">
+                    Don't wait. Get your first **10 product images** professionally edited for just **₹1,499!** This flash offer ends today.
+                </p>
+                <a href="./contact.html" id="popupCta2" class="block w-full text-center bg-white text-black font-bold py-3 px-5 rounded hover:bg-gray-200 transition-colors">
+                    Get 10 Images for ₹1,499
+                </a>
+            `;
+
+            
+            // --- 2. GET ELEMENTS ---
+            const overlay = document.getElementById('popupOverlay');
+            const modal = document.getElementById('popupModal');
+            const contentWrapper = document.getElementById('popupContentWrapper');
+            const closeBtn = document.getElementById('popupCloseBtn');
+
+            // --- 3. DEFINE TIMERS ---
+            let primaryTimer = null;
+            let followUpTimer = null;
+            
+            // --- 4. FLAGS ---
+            let hasShownPopup1 = false;
+            let hasShownPopup2 = false;
+            let hasClickedCTA = false;
+
+            // --- 5. POPUP LOGIC ---
+
+            // Function to OPEN or SWAP popup content
+            function openPopup(content) {
+                // If it's already open, just swap the content
+                if (modal.classList.contains('is-open')) {
+                    contentWrapper.classList.add('fading-out');
+                    setTimeout(() => {
+                        contentWrapper.innerHTML = content;
+                        contentWrapper.classList.remove('fading-out');
+                    }, 400); // Must match CSS
+                } else {
+                    // Otherwise, open it fresh
+                    contentWrapper.innerHTML = content;
+                    overlay.classList.add('is-open');
+                    modal.classList.add('is-open');
+                }
+            }
+
+            // Function to CLOSE the popup
+            function closePopup() {
+                overlay.classList.remove('is-open');
+                modal.classList.remove('is-open');
+                // NOTE: We no longer cancel the followUpTimer here.
+            }
+
+            // --- 6. SET UP EVENT LISTENERS ---
+
+            // Close button click
+            closeBtn.addEventListener('click', closePopup);
+
+            // Overlay click (to close)
+            overlay.addEventListener('click', closePopup);
+
+            // Clicks on CTAs should stop future popups
+            // We use event delegation on the wrapper
+            contentWrapper.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    hasClickedCTA = true;
+                    closePopup();
+                    clearTimeout(primaryTimer);
+                    clearTimeout(followUpTimer);
+                }
+            });
+
+
+            // --- 7. START THE TIMERS ---
+
+            // Timer 1: Show "Free Sample" after 10 seconds
+            primaryTimer = setTimeout(() => {
+                if (hasClickedCTA || hasShownPopup1) return; // Don't show if CTA was clicked or it's already shown
+                
+                hasShownPopup1 = true;
+                openPopup(popup1_Content);
+
+            }, 10000); // 10 seconds
+
+            
+            // Timer 2: Show "Impulse Buy" after 30 seconds (10 + 20)
+            // This timer is set independently and will run no matter what
+            followUpTimer = setTimeout(() => {
+                if (hasClickedCTA || hasShownPopup2) return; // Don't show if CTA was clicked
+                
+                hasShownPopup2 = true;
+                openPopup(popup2_Content);
+
+            }, 30000); // 30 seconds total (10s for first, 20s later)
+
+        });
+    </script>
+
+</body>
+</html>

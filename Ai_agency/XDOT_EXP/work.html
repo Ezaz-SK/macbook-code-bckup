@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - Xdot Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- POPUP ELEMENTS -->
+    <div id="popupOverlay" class="popup-overlay"></div>
+
+    <div id="popupModal" class="popup-modal">
+        <button id="popupCloseBtn" class="absolute top-3 right-4 text-gray-500 hover:text-white transition-colors" aria-label="Close modal" style="position: absolute; top: 0.75rem; right: 1rem;">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+        </button>
+
+        <div id="popupContentWrapper" class="popup-content-wrapper p-8 pt-10">
+        </div>
+    </div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div id="announcement-bar" class="fixed top-0 left-0 w-full bg-black text-white p-3 shadow-lg transition-all duration-300 ease-in-out z-50 border-b border-gray-800">
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="flex items-center justify-between">
+
+                <!-- Left Side: Icon and Text -->
+                <div class="flex items-center gap-3">
+                    <!-- Icon -->
+                    <div class="hidden sm:block flex-shrink-0 text-gray-400">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="text-sm sm:text-base font-medium text-gray-300">
+                        <span class="font-bold text-white">⚡ FLASH SALE:</span>
+                        Get 50% OFF all 24-Hour Website packages!
+                        <a href="./contact.html" class="hidden md:inline-block font-bold text-white hover:text-gray-300 transition-colors ml-1 underline">
+                            Claim Offer
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Close Button -->
+                <div class="flex-shrink-0">
+                    <button id="close-bar-btn" class="ml-4 p-1 rounded-full text-gray-500 hover:text-white hover:bg-gray-700 transition-colors" aria-label="Dismiss announcement">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="logo-text">Xdot</span>
+                </div>
+
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Works</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav-contact">
+                    <a href="./contact.html">
+                    <button class="simple-btn" id="simpleBtn" aria-label="Get in touch with us">
+                        Get in touch
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="work-hero-section">
+            <div class="container mx-auto px-4 py-20">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8">
+                        Our <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Proof</span>
+                    </h1>
+                    <p class="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                        See how we transform simple phone snaps into stunning catalogs and launch blazing-fast websites in as little as 6 hours. This is where we show our results.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+  
+
+
+
+        <!-- PROJECTS SECTION -->
+        <section class="projects-section">
+            <div class="container mx-auto px-4 py-20">
+                <div class="max-w-6xl mx-auto">
+                    
+                    </div>
+
+                    <!-- FILTER BUTTONS -->
+                    <div class="filter-buttons flex justify-center gap-4 mb-12 flex-wrap">
+                        <button class="filter-btn active" data-filter="all">
+                            All Projects
+                        </button>
+                        <button class="filter-btn" data-filter="ai-catalog">
+                            AI Catalog Maker
+                        </button>
+                        <button class="filter-btn" data-filter="web-development">
+                            Web Development
+                        </button>
+                    </div>
+
+                    <!-- PROJECT CARDS GRID -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 projects-grid" id="projectsGrid">
+                        <!-- Project cards will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT MODAL -->
+        <div id="projectModalContainer" class="modal-container">
+            <!-- The dark overlay -->
+            <div id="modalOverlay" class="modal-overlay"></div>
+
+            <!-- The modal content box -->
+            <div class="modal-content">
+                <!-- UPDATED: Close Button -->
+                <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close modal">
+                    &times; <!-- A simple and universal 'X' -->
+                </button>
+
+                <!-- Dynamic Content Body -->
+                <div id="modalBody" class="p-6 md:p-10">
+                    <!-- Project details will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+       <section class="testimonials-section">
+            <div class="container mx-auto px-4 py-20">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-6xl font-bold text-white mb-8">
+                            What Our <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Clients Say</span>
+                        </h2>
+                        <p class="text-neutral-400 text-lg md:text-xl max-w-3xl mx-auto">
+                            Don't just take our word for it. Here's what our clients have to say about working with us.
+                        </p>
+                    </div>
+
+                    <div class="testimonials-grid">
+                        <!-- Testimonial 1 (Rapid Web Dev) -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                   "I needed a portfolio site *fast* for a client presentation. Xdot is unbelievably quick. They delivered a stunning, custom portfolio in just 48 hours. I was blown away."
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                                                               <div class="avatar-placeholder">PS</div>
+
+                                        <!--- <img src="./assets/I needed a portfolio website that truly reflected my brand as a freelance designer. Xdot's team didn't just build a site; they crafted an experience. They understood my aesthetic perfectly. The .png" alt="Priya Sharma" class="avatar-img">-->
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Priya Sharma</div>
+                                        <div class="author-title">Freelance Designer, Bangalore</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 (AI Catalog Maker) -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    "Our product photos were just phone clicks and looked so amateur. Xdot used AI to turn them into studio-quality shots for 80% less than a photographer. Our sales on Amazon have doubled."
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <div class="avatar-placeholder">RG</div>
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Rohan Gupta</div>
+                                        <div class="author-title">Owner, Jaipur Jewels</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 (Rapid E-commerce) -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    "Xdot built our entire e-commerce site. It's not just beautiful, it's incredibly fast. We've seen a 300% increase in online sales since the launch. A total game-changer for our D2C brand."
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <div class="avatar-placeholder">VS</div>
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Vikram Singh</div>
+                                        <div class="author-title">Founder, UrbanWeaves</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     
+    </main>
+
+    <!-- PROJECT MODAL -->
+    <div id="projectModalContainer" class="modal-container">
+        <!-- The dark overlay -->
+        <div id="modalOverlay" class="modal-overlay"></div>
+
+        <!-- The modal content box -->
+        <div class="modal-content">
+            <!-- Close Button -->
+            <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close modal">
+                &times;
+            </button>
+
+            <!-- Dynamic Content Body -->
+            <div id="modalBody" class="p-6 md:p-10">
+                <!-- Project details will be injected here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Xdot Agency. All rights reserved.</p>
+                </div>
+                 <!--<div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+                </div>-->
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="work.js"></script>
+</body>
+</html>

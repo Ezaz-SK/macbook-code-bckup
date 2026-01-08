@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - ejajul Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="logo-text">ejajul</span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav-contact">
+                    <button class="simple-btn" id="simpleBtn" aria-label="Get in touch with us">
+                        Get in touch
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Banner Section -->
+        <section class="work-hero-section">
+            <div class="container mx-auto px-4 py-20">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8">
+                        Our <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Work</span>
+                    </h1>
+                    <p class="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                        Discover our portfolio of transformative digital experiences. From innovative web platforms to cutting-edge AI solutions, we bring ideas to life.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter/Sort Section -->
+        <section class="filter-section">
+            <div class="container mx-auto px-4 py-12">
+                <div class="max-w-6xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">All Projects</button>
+                            <button class="filter-btn" data-filter="web">Web Development</button>
+                            <button class="filter-btn" data-filter="ai">AI Solutions</button>
+                            <button class="filter-btn" data-filter="design">UI/UX Design</button>
+                            <button class="filter-btn" data-filter="brand">Branding</button>
+                        </div>
+                        <div class="sort-dropdown">
+                            <select class="sort-select">
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                                <option value="featured">Featured</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-section">
+            <div class="container mx-auto px-4 py-12">
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <div class="project-card" data-category="web" data-featured="true" data-demo="true">
+                        <div class="project-image">
+                            <img src="./assets/water_bottle.jpeg" alt="E-Commerce Platform" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-category">Web Development</div>
+                                <div class="project-links">
+                                    <button class="project-link view-project" data-project="ecommerce">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-Commerce Revolution</h3>
+                            <p class="project-description">Complete digital transformation for a retail giant, increasing online sales by 300%.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card" data-category="ai" data-featured="true">
+                        <div class="project-image">
+                            <img src="./assets/sunsscreen.jpeg" alt="AI Analytics Platform" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-category">AI Solutions</div>
+                                <div class="project-links">
+                                    <button class="project-link view-project" data-project="ai-analytics">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI-Powered Analytics</h3>
+                            <p class="project-description">Revolutionary SaaS platform using machine learning to provide predictive insights.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">React</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card" data-category="design" data-featured="false">
+                        <div class="project-image">
+                            <img src="./assets/earring.jpeg" alt="Mobile Banking App" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-category">UI/UX Design</div>
+                                <div class="project-links">
+                                    <button class="project-link view-project" data-project="mobile-banking">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Next-Gen Banking</h3>
+                            <p class="project-description">Award-winning mobile banking application with biometric security.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Biometrics</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card" data-category="brand" data-featured="false">
+                        <div class="project-image">
+                            <img src="./assets/specs.jpeg" alt="Brand Identity" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-category">Branding</div>
+                                <div class="project-links">
+                                    <button class="project-link view-project" data-project="brand-identity">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Brand Evolution</h3>
+                            <p class="project-description">Complete brand identity redesign for a tech startup.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Brand Strategy</span>
+                                <span class="tech-tag">Design System</span>
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5 -->
+                    <div class="project-card" data-category="web" data-featured="false" data-demo="true">
+                        <div class="project-image">
+                            <img src="./assets/powerpops.jpeg" alt="SaaS Dashboard" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-category">Web Development</div>
+                                <div class="project-links">
+                                    <button class="project-link view-project" data-project="saas-dashboard">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">SaaS Dashboard</h3>
+                            <p class="project-description">Comprehensive analytics dashboard for enterprise clients.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6 -->
+                    <div class="project-card" data-category="ai" data-featured="false">
+                        <div class="project-image">
+                            <img src="./assets/princles.jpeg" alt="AI Chatbot" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-category">AI Solutions</div>
+                                <div class="project-links">
+                                    <button class="project-link view-project" data-project="ai-chatbot">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Customer Support</h3>
+                            <p class="project-description">Intelligent chatbot system reducing support tickets by 70%.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container mx-auto px-4 py-20">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-6xl font-bold text-white mb-8">
+                            What Our <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Clients Say</span>
+                        </h2>
+                        <p class="text-neutral-400 text-lg md:text-xl max-w-3xl mx-auto">
+                            Don't just take our word for it. Here's what our clients have to say about working with us.
+                        </p>
+                    </div>
+
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    "I needed a portfolio website that truly reflected my brand as a freelance designer. Ejajul's team didn't just build a site; they crafted an experience. They understood my aesthetic perfectly and delivered beyond my expectations."
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="./assets/I needed a portfolio website that truly reflected my brand as a freelance designer. Ejajul's team didn't just build a site; they crafted an experience. They understood my aesthetic perfectly. The .png" alt="Sarah Chen" class="avatar-img">
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Sarah Chen</div>
+                                        <div class="author-title">Freelance Designer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    "The AI-powered analytics platform they built for us has revolutionized how we make business decisions. The accuracy and insights are incredible, and our ROI has increased by 250% since implementation."
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <div class="avatar-placeholder">MJ</div>
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Marcus Johnson</div>
+                                        <div class="author-title">CEO, TechFlow Inc.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    "Working with ejajul was a game-changer for our startup. Their e-commerce platform not only looks stunning but performs flawlessly. We've seen a 300% increase in online sales."
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <div class="avatar-placeholder">AR</div>
+                                    </div>
+                                    <div class="author-info">
+                                        <div class="author-name">Anna Rodriguez</div>
+                                        <div class="author-title">Founder, EcoStyle</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="work-cta-section">
+            <div class="container mx-auto px-4 py-20">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-8">
+                        Ready to <span class="bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text">Transform</span> Your Vision?
+                    </h2>
+                    <p class="text-neutral-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                        Let's collaborate to bring your ideas to life. Whether it's a cutting-edge web platform, an AI solution, or a complete brand transformation, we're here to make it happen.
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="cta-btn primary" id="startProjectBtn">
+                            Start Your Project
+                        </button>
+                        <button class="cta-btn secondary" id="viewServicesBtn">
+                            View Our Services
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modals -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" id="modalClose">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 ejajul Agency. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="work.js"></script>
+</body>
+</html>
