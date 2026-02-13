@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Elena Smith - VITA Salon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vita-cream': '#fdfcf2',
+                        'vita-dark': '#1a1a1a',
+                        'vita-beige': '#eaddca',
+                        'vita-muted': '#666666',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-nav {
+                @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+            }
+            .btn-vita {
+                @apply px-6 py-2 rounded-full border border-vita-dark text-sm font-medium transition-all hover:bg-vita-dark hover:text-white flex items-center gap-2;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-vita-cream text-vita-dark font-sans selection:bg-vita-beige">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+            <div class="flex items-center gap-12">
+                <a href="zai_salon.html" class="text-2xl font-serif font-bold tracking-tight">Reborn Unisex Studio</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium opacity-80">
+                    <a href="zai_salon.html#services" class="hover:opacity-100 transition-opacity">Services</a>
+                    <a href="zai_salon.html#specialists" class="hover:opacity-100 transition-opacity">Specialists</a>
+                    <a href="work.html" class="hover:opacity-100 transition-opacity">Our works</a>
+                    <a href="zai_salon.html#about" class="hover:opacity-100 transition-opacity">About</a>
+                    <a href="zai_salon.html#contact" class="hover:opacity-100 transition-opacity">Contact</a>
+                </nav>
+            </div>
+
+            <!-- <div class="absolute left-1/2 -translate-x-1/2 flex md:hidden">
+                <a href="#contact" class="btn-vita bg-white text-[10px] px-3 py-1.5 whitespace-nowrap">
+                    Make an appointment <i class="fa-solid fa-arrow-up-right-from-square text-[8px] opacity-60"></i>
+                </a>
+            </div> -->
+
+            <div class="flex items-center gap-4">
+                <div class="hidden md:block">
+                    <a href="zai_salon.html#contact" class="btn-vita bg-white">
+                        Make an appointment <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60"></i>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-vita-dark">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 p-6 flex flex-col gap-4 shadow-xl">
+            <a href="zai_salon.html#services" class="text-lg font-medium">Services</a>
+            <a href="zai_salon.html#specialists" class="text-lg font-medium">Specialists</a>
+            <a href="work.html" class="text-lg font-medium">Our works</a>
+            <a href="zai_salon.html#about" class="text-lg font-medium">About</a>
+            <a href="zai_salon.html#contact" class="text-lg font-medium">Contact</a>
+            <a href="zai_salon.html#contact" class="btn-vita bg-vita-dark text-white justify-center mt-4">Make an
+                appointment</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <!-- Specialist Profile -->
+        <section class="max-w-7xl mx-auto px-6 mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1594744803329-a584af1cae24?q=80&w=1000&auto=format&fit=crop"
+                            alt="Dr. Elena Smith" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">DERMATOLOGIST</p>
+                        <h1 class="text-5xl md:text-7xl font-serif">Dr. Elena Smith</h1>
+                    </div>
+
+                    <p class="text-lg text-vita-muted leading-relaxed italic font-serif">
+                        "Healthy skin is a reflection of overall wellness. My mission is to help you achieve your most
+                        radiant, natural self through science and personalized care."
+                    </p>
+
+                    <div class="space-y-6 text-vita-muted leading-relaxed">
+                        <p>
+                            Dr. Elena Smith is a board-certified dermatologist with over 12 years of experience in
+                            medical and cosmetic dermatology. She specializes in advanced skin rejuvenation, anti-aging
+                            therapies, and corrective treatments.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
+                            <div>
+                                <h4 class="text-sm font-bold uppercase tracking-widest mb-2">Expertise</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>Skin Rejuvenation</li>
+                                    <li>Medical Facials</li>
+                                    <li>Injection Therapy</li>
+                                    <li>Laser Treatments</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold uppercase tracking-widest mb-2">Education</h4>
+                                <p class="text-sm">Johns Hopkins University<br>School of Medicine</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="zai_salon.html#contact" class="btn-vita bg-vita-dark text-white px-8 py-4 w-fit">
+                        Book Elena <i class="fa-solid fa-calendar-check text-xs opacity-60 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Works -->
+        <section class="max-w-7xl mx-auto px-6">
+            <div class="space-y-4 mb-16">
+                <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">PORTFOLIO</p>
+                <h2 class="text-4xl md:text-6xl font-serif">Selected Works</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group rounded-[2rem] overflow-hidden aspect-square bg-white border border-vita-dark/5">
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?q=80&w=1000&auto=format&fit=crop"
+                        alt="Work 1"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="group rounded-[2rem] overflow-hidden aspect-square bg-white border border-vita-dark/5">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1000&auto=format&fit=crop"
+                        alt="Work 2"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="group rounded-[2rem] overflow-hidden aspect-square bg-white border border-vita-dark/5">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1000&auto=format&fit=crop"
+                        alt="Work 3"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="max-w-7xl mx-auto px-6 py-12 border-t border-vita-dark/5 flex flex-col md:flex-row items-center justify-between gap-8">
+        <a href="zai_salon.html" class="text-xl font-serif font-bold">VITA</a>
+        <p class="text-[10px] opacity-40 uppercase tracking-widest">&copy; 2026 VITA SALON. ALL RIGHTS RESERVED.</p>
+        <div class="flex gap-6 opacity-60 text-sm">
+            <a href="#" class="hover:opacity-100 transition-opacity">Instagram</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Facebook</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking on links
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>

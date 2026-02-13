@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reborn Unisex Studio - Hair, Beauty & Bridal Salon in Malviya Nagar</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'reborn-cream': '#fdfcf2',
+                        'reborn-dark': '#1a1a1a',
+                        'reborn-beige': '#f2ebca',
+                        'reborn-muted': '#555555',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-nav {
+                @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+            }
+            .btn-reborn {
+                @apply px-6 py-2 rounded-full border border-reborn-dark text-sm font-medium transition-all hover:bg-reborn-dark hover:text-white flex items-center gap-2;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-reborn-cream text-reborn-dark font-sans selection:bg-reborn-beige">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+            <div class="flex items-center gap-12">
+                <a href="index.html" class="text-2xl font-serif font-bold tracking-tight">Reborn Unisex Studio</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium opacity-80">
+                    <a href="#services" class="hover:opacity-100 transition-opacity">Services</a>
+                    <a href="#specialists" class="hover:opacity-100 transition-opacity">Specialists</a>
+                    <a href="#work" class="hover:opacity-100 transition-opacity">Our works</a>
+                    <a href="#about" class="hover:opacity-100 transition-opacity">About</a>
+                    <a href="appointment.html" class="hover:opacity-100 transition-opacity">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Centered Button -->
+            <!-- <div class="absolute left-1/2 -translate-x-1/2 flex md:hidden">
+                <a href="appointment.html" class="btn-reborn bg-white text-[10px] px-3 py-1.5 whitespace-nowrap">
+                    Make an appointment <i class="fa-solid fa-arrow-up-right-from-square text-[8px] opacity-60"></i>
+                </a>
+            </div> -->
+
+            <div class="flex items-center gap-4">
+                <!-- Desktop Right-aligned Button -->
+                <div class="hidden md:block">
+                    <a href="appointment.html" class="btn-reborn bg-white">
+                        Make an appointment <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60"></i>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-reborn-dark">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 p-6 flex flex-col gap-4 shadow-xl">
+            <a href="#services" class="text-lg font-medium">Services</a>
+            <a href="#specialists" class="text-lg font-medium">Specialists</a>
+            <a href="#work" class="text-lg font-medium">Our works</a>
+            <a href="#about" class="text-lg font-medium">About</a>
+            <a href="appointment.html" class="text-lg font-medium">Contact</a>
+            <a href="appointment.html" class="btn-reborn bg-reborn-dark text-white justify-center mt-4">Make an
+                appointment</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="home" class="max-w-7xl mx-auto px-6 py-6 md:py-12">
+            <div class="relative rounded-[2rem] overflow-hidden min-h-[400px] md:min-h-[650px] group bg-reborn-dark">
+                <!-- Background Image -->
+                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=2000&auto=format&fit=crop"
+                    alt="Beauty Professional"
+                    class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+                <div class="absolute top-12 left-12 max-w-sm hidden lg:block animate-fade-in-up">
+                    <p class="text-white/80 text-xs leading-relaxed">
+                        Reborn Unisex Studio is a professional unisex salon in Malviya Nagar, New Delhi, offering
+                        complete hair, beauty, nail and makeup solutions under one roof.
+                    </p>
+                </div>
+
+                <!-- Floating Appointment Button -->
+                <div class="absolute top-8 right-8 lg:top-auto lg:bottom-12 lg:right-12 z-20">
+                    <a href="appointment.html"
+                        class="group relative flex items-center justify-center w-28 h-28 md:w-40 md:h-40 hover:scale-105 transition-transform duration-500">
+                        <!-- Rotating Text SVG -->
+                        <div class="absolute inset-0 animate-spin-slow origin-center">
+                            <svg viewBox="0 0 100 100" class="w-full h-full">
+                                <path id="heroCirclePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                                    fill="transparent"></path>
+                                <text class="text-[7.5px] uppercase tracking-[0.25em] font-medium fill-white/80">
+                                    <textPath xlink:href="#heroCirclePath"> • Make an appointment • Book visit •
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                        <!-- Center Button -->
+                        <div
+                            class="w-14 h-14 md:w-20 md:h-20 bg-white rounded-full flex flex-col items-center justify-center shadow-2xl group-hover:bg-reborn-beige transition-colors duration-500">
+                            <i class="fa-solid fa-calendar-plus text-reborn-dark text-xl md:text-2xl mb-1"></i>
+                            <span
+                                class="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-reborn-dark">Book</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="absolute bottom-12 left-8 md:left-12 right-12">
+                    <h1
+                        class="text-white text-4xl md:text-8xl font-serif italic leading-[1.1] animate-fade-in-up delay-300">
+                        Trust your beauty <span class="not-italic">to professionals</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                <div class="space-y-2 animate-fade-in-up">
+                    <p class="text-4xl md:text-7xl font-serif">12</p>
+                    <p class="text-[10px] md:text-sm opacity-60 uppercase tracking-widest">expert<br>stylists</p>
+                </div>
+                <div class="space-y-2 animate-fade-in-up delay-100">
+                    <p class="text-4xl md:text-7xl font-serif">8k+</p>
+                    <p class="text-[10px] md:text-sm opacity-60 uppercase tracking-widest">happy<br>clients</p>
+                </div>
+                <div class="space-y-2 animate-fade-in-up delay-200">
+                    <p class="text-4xl md:text-7xl font-serif">10</p>
+                    <p class="text-[10px] md:text-sm opacity-60 uppercase tracking-widest">years<br>experience</p>
+                </div>
+                <div class="space-y-2 animate-fade-in-up delay-300">
+                    <p class="text-4xl md:text-7xl font-serif">100%</p>
+                    <p class="text-[10px] md:text-sm opacity-60 uppercase tracking-widest">satisfaction<br>guaranteed
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section id="services" class="max-w-7xl mx-auto px-6 py-24">
+            <div class="space-y-4 mb-20 text-center">
+                <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">OUR SERVICES</p>
+                <h2 class="text-4xl md:text-6xl font-serif">A curated experience <br><span class="italic">for your
+                        beauty</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Service 1 -->
+                <div
+                    class="bg-white p-8 rounded-[2rem] border border-reborn-dark/5 hover:border-reborn-dark/20 transition-all group">
+                    <div
+                        class="w-12 h-12 bg-reborn-cream rounded-2xl flex items-center justify-center mb-6 text-reborn-dark group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-scissors text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Hair Styling</h3>
+                    <p class="text-xs opacity-50 leading-relaxed mb-6">From precision cuts to artistic coloring and
+                        elegant updos for any occasion.</p>
+                    <div class="flex items-center justify-between pt-6 border-t border-reborn-dark/5">
+                        <span class="text-[10px] font-bold opacity-40">STARTS FROM</span>
+                        <span class="text-lg font-serif italic">$45</span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-reborn-dark text-white p-8 rounded-[2rem] group">
+                    <div
+                        class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Skincare</h3>
+                    <p class="text-xs opacity-50 leading-relaxed mb-6">Advanced facial treatments, skin rejuvenation,
+                        and personalized therapy routines.</p>
+                    <div class="flex items-center justify-between pt-6 border-t border-white/10">
+                        <span class="text-[10px] font-bold opacity-40">STARTS FROM</span>
+                        <span class="text-lg font-serif italic">$80</span>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="bg-white p-8 rounded-[2rem] border border-reborn-dark/5 hover:border-reborn-dark/20 transition-all group">
+                    <div
+                        class="w-12 h-12 bg-reborn-cream rounded-2xl flex items-center justify-center mb-6 text-reborn-dark group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Makeup</h3>
+                    <p class="text-xs opacity-50 leading-relaxed mb-6">Professional makeup for weddings, events, and
+                        photoshoots by top artists.</p>
+                    <div class="flex items-center justify-between pt-6 border-t border-reborn-dark/5">
+                        <span class="text-[10px] font-bold opacity-40">STARTS FROM</span>
+                        <span class="text-lg font-serif italic">$60</span>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="bg-white p-8 rounded-[2rem] border border-reborn-dark/5 hover:border-reborn-dark/20 transition-all group">
+                    <div
+                        class="w-12 h-12 bg-reborn-cream rounded-2xl flex items-center justify-center mb-6 text-reborn-dark group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hand-sparkles text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Nail Art</h3>
+                    <p class="text-xs opacity-50 leading-relaxed mb-6">Manicures, pedicures, and artistic nail design
+                        using premium materials.</p>
+                    <div class="flex items-center justify-between pt-6 border-t border-reborn-dark/5">
+                        <span class="text-[10px] font-bold opacity-40">STARTS FROM</span>
+                        <span class="text-lg font-serif italic">$35</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialists Section -->
+        <section id="specialists" class="max-w-7xl mx-auto px-6 py-20 bg-white/30 rounded-[3rem]">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                <div class="max-w-xl space-y-4">
+                    <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">OUR EXPERTS</p>
+                    <h2 class="text-4xl md:text-6xl font-serif">Meet our top specialists</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Specialist 1 -->
+                <a href="specialist-elena.html" class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1594744803329-a584af1cae24?q=80&w=1000&auto=format&fit=crop"
+                            alt="Dr. Elena Smith"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-serif">Elena Smith</h3>
+                            <p class="text-sm opacity-50 uppercase tracking-widest mt-1">Skincare Expert</p>
+                        </div>
+                        <span
+                            class="w-10 h-10 border border-reborn-dark/10 rounded-full flex items-center justify-center group-hover:bg-reborn-dark group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                        </span>
+                    </div>
+                </a>
+                <!-- Specialist 2 -->
+                <a href="specialist-marcus.html" class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?q=80&w=1000&auto=format&fit=crop"
+                            alt="Marcus Vane"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-serif">Marcus Vane</h3>
+                            <p class="text-sm opacity-50 uppercase tracking-widest mt-1">Master Barber</p>
+                        </div>
+                        <span
+                            class="w-10 h-10 border border-reborn-dark/10 rounded-full flex items-center justify-center group-hover:bg-reborn-dark group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                        </span>
+                    </div>
+                </a>
+                <!-- Specialist 3 -->
+                <a href="specialist-sarah.html" class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop"
+                            alt="Sarah Chen"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-serif">Sarah Chen</h3>
+                            <p class="text-sm opacity-50 uppercase tracking-widest mt-1">Professional Makeup Artist</p>
+                        </div>
+                        <span
+                            class="w-10 h-10 border border-reborn-dark/10 rounded-full flex items-center justify-center group-hover:bg-reborn-dark group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- Our Work Section -->
+        <section id="work" class="max-w-7xl mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                <div class="max-w-xl space-y-4">
+                    <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">PORTFOLIO</p>
+                    <h2 class="text-4xl md:text-6xl font-serif">Our latest transformations</h2>
+                </div>
+                <a href="work.html" class="btn-reborn mb-2">See all work</a>
+            </div>
+
+            <!-- Masonry-like Grid Showcase -->
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
+                <div class="break-inside-avoid rounded-[2rem] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop"
+                        alt="Salon Work 1"
+                        class="w-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid rounded-[2rem] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1000&auto=format&fit=crop"
+                        alt="Salon Work 2"
+                        class="w-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid rounded-[2rem] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000&auto=format&fit=crop"
+                        alt="Salon Work 3"
+                        class="w-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid rounded-[2rem] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=1000&auto=format&fit=crop"
+                        alt="Salon Work 4"
+                        class="w-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid rounded-[2rem] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1000&auto=format&fit=crop"
+                        alt="Salon Work 5"
+                        class="w-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid rounded-[2rem] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop"
+                        alt="Salon Work 6"
+                        class="w-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+            </div>
+        </section>
+        <!-- About Us Section -->
+        <section id="about" class="max-w-7xl mx-auto px-6 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-[3rem] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2000&auto=format&fit=crop"
+                            alt="About Reborn Unisex Studio" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Overlapping highlight box -->
+                    <div
+                        class="absolute -bottom-10 -right-10 bg-reborn-beige p-10 rounded-[2rem] hidden md:block max-w-xs shadow-2xl">
+                        <p class="text-reborn-dark text-lg font-serif italic leading-relaxed">
+                            "True beauty begins the moment you decide to be yourself."
+                        </p>
+                        <p class="mt-4 text-[10px] uppercase tracking-widest font-bold opacity-40">— Coco Chanel</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">SINCE 2014</p>
+                        <h2 class="text-4xl md:text-6xl font-serif leading-tight">A decade of <br><span
+                                class="italic font-normal">redefining elegance</span></h2>
+                    </div>
+
+                    <div class="space-y-6 text-reborn-muted leading-relaxed">
+                        <p>
+                            Reborn Unisex Studio is a professional unisex salon in Malviya Nagar, New Delhi, offering
+                            complete hair, beauty, nail and makeup solutions under one roof.
+                        </p>
+                        <p>
+                            The studio is especially known for its expert bridal and party makeup, along with
+                            personalised hair and skin services for both men and women.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-12 pt-8">
+                        <div>
+                            <p class="text-3xl font-serif italic">100%</p>
+                            <p class="text-[10px] uppercase tracking-widest opacity-40 font-bold">Natural Products</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-serif italic">Global</p>
+                            <p class="text-[10px] uppercase tracking-widest opacity-40 font-bold">Industry Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="bg-reborn-beige/30 py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="space-y-4 mb-20 text-center">
+                    <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">CLIENT VOICES</p>
+                    <h2 class="text-4xl md:text-6xl font-serif">What our guests say</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div
+                        class="bg-white p-10 rounded-[3rem] shadow-sm border border-reborn-dark/5 space-y-8 flex flex-col justify-between">
+                        <p class="text-reborn-dark text-lg font-serif italic leading-relaxed">
+                            "The attention to detail at Reborn Unisex Studio is unmatched. Elena transformed my
+                            skincare routine and I feel so much more confident. Best salon in Malviya Nagar!"
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop"
+                                    alt="Sophia V." class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold uppercase tracking-widest">Sophia V.</p>
+                                <p class="text-[10px] opacity-40 uppercase tracking-widest">Loyal Client</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div
+                        class="bg-reborn-dark text-white p-10 rounded-[3rem] shadow-xl space-y-8 flex flex-col justify-between transform md:-translate-y-8">
+                        <p class="text-white/90 text-lg font-serif italic leading-relaxed">
+                            "I've traveled the world, and Marcus is genuinely a master of his craft. He understood
+                            exactly what I wanted before I even said it. Simply spectacular."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-white/10">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+                                    alt="Julian M." class="w-full h-full object-cover border border-white/20">
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold uppercase tracking-widest">Julian M.</p>
+                                <p class="text-[10px] opacity-40 uppercase tracking-widest text-white/40">Entrepreneur
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div
+                        class="bg-white p-10 rounded-[3rem] shadow-sm border border-reborn-dark/5 space-y-8 flex flex-col justify-between">
+                        <p class="text-reborn-dark text-lg font-serif italic leading-relaxed">
+                            "Sarah's makeup artistry for my wedding was a dream come true. She made me feel completely
+                            myself, but at my most radiant. Truly an artist."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
+                                    alt="Isabella R." class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold uppercase tracking-widest">Isabella R.</p>
+                                <p class="text-[10px] opacity-40 uppercase tracking-widest">Bride</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="max-w-7xl mx-auto px-6 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <!-- Contact Form -->
+                <div class="space-y-12">
+                    <div class="space-y-4">
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">BOOKING</p>
+                        <h2 class="text-4xl md:text-6xl font-serif">Book your <br>next visit</h2>
+                    </div>
+
+                    <div
+                        class="w-full min-h-[600px] bg-white rounded-[2.5rem] shadow-xl border border-reborn-dark/5 overflow-hidden">
+                        <iframe
+                            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2IitQcdTERqrI0xvxLzLALgzLpqPpNrnXmJN3XC2wIB28bHYTujvVT4w-mc9frH49eIVFM-JMg?gv=true"
+                            style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+                    </div>
+                </div>
+
+                <!-- Info & Map -->
+                <div class="space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-bold uppercase tracking-widest opacity-40">Visit Us</h3>
+                            <p class="text-sm leading-relaxed">JA 1/B 1, Ground Floor, Near Sant Nirankari School,
+                                <br>Khirki Extension, Malviya Nagar, New Delhi 110017
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-bold uppercase tracking-widest opacity-40">Contact</h3>
+                            <p class="text-sm leading-relaxed font-medium">hello@rebornunisexstudio.com</p>
+                            <p class="text-sm leading-relaxed font-medium">+91 99997 46509</p>
+                            <p class="text-sm leading-relaxed font-medium">+91 97590 15975</p>
+                            <div class="flex gap-4 pt-2">
+                                <a href="https://wa.me/919999746509" target="_blank"
+                                    class="w-10 h-10 rounded-full border border-reborn-dark/10 flex items-center justify-center hover:bg-reborn-dark hover:text-white transition-all"
+                                    title="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full border border-reborn-dark/10 flex items-center justify-center hover:bg-reborn-dark hover:text-white transition-all"
+                                    title="Instagram">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full border border-reborn-dark/10 flex items-center justify-center hover:bg-reborn-dark hover:text-white transition-all"
+                                    title="Facebook">
+                                    <i class="fa-brands fa-facebook-f text-lg"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full border border-reborn-dark/10 flex items-center justify-center hover:bg-reborn-dark hover:text-white transition-all"
+                                    title="Twitter">
+                                    <i class="fa-brands fa-x-twitter text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="space-y-4 col-span-1 md:col-span-2">
+                            <h3 class="text-sm font-bold uppercase tracking-widest opacity-40">Working Hours</h3>
+                            <p class="text-sm leading-relaxed">Daily: 10am - 8pm<br>(Prior appointment recommended)</p>
+                        </div>
+                    </div>
+
+                    <!-- Google Map Embed -->
+                    <div
+                        class="w-full h-80 rounded-[2rem] overflow-hidden shadow-xl  hover:grayscale-0 transition-all duration-700">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.13216223677!2d77.21740059999999!3d28.535746999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3badd758db1%3A0x5dd4e180c4e373fb!2sReborn%20Unisex%20Studio!5e0!3m2!1sen!2sin!4v1768495109617!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+
+    </main>
+
+    <footer
+        class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between border-t border-reborn-dark/5 gap-8">
+        <div class="flex items-center gap-2 group cursor-pointer">
+            <div
+                class="w-10 h-10 bg-reborn-dark rounded-full flex items-center justify-center -rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                <div class="w-5 h-5 border-2 border-white rounded-full border-t-transparent animate-spin-slow"></div>
+            </div>
+            <span class="text-sm font-medium tracking-tight">visit rebornunisexstudio.com</span>
+        </div>
+
+        <nav class="flex gap-8 text-xs font-semibold uppercase tracking-widest opacity-60">
+            <a href="#" class="hover:opacity-100 transition-opacity">Instagram</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Facebook</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Twitter</a>
+        </nav>
+
+        <p class="text-[10px] opacity-40 uppercase tracking-widest">&copy; 2026 REBORN UNISEX STUDIO. ALL RIGHTS
+            RESERVED.</p>
+    </footer>
+
+    <script>
+        // Scroll effect for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking on links
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+    <style>
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 8s linear infinite;
+        }
+    </style>
+</body>
+
+</html>

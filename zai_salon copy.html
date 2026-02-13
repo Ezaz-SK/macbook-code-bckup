@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITA - Precision & Style Salon</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vita-cream': '#fdfcf2',
+                        'vita-dark': '#1a1a1a',
+                        'vita-beige': '#f2ebca',
+                        'vita-muted': '#555555',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-nav {
+                @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+            }
+            .btn-vita {
+                @apply px-6 py-2 rounded-full border border-vita-dark text-sm font-medium transition-all hover:bg-vita-dark hover:text-white flex items-center gap-2;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-vita-cream text-vita-dark font-sans selection:bg-vita-beige">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-12">
+                <a href="#" class="text-2xl font-serif font-bold tracking-tight">VITA</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium opacity-80">
+                    <a href="#services" class="hover:opacity-100 transition-opacity">Services</a>
+                    <a href="#specialists" class="hover:opacity-100 transition-opacity">Specialists</a>
+                    <a href="#works" class="hover:opacity-100 transition-opacity">Our works</a>
+                    <a href="#subscriptions" class="hover:opacity-100 transition-opacity">Subscriptions</a>
+                    <a href="#about" class="hover:opacity-100 transition-opacity">About</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" class="btn-vita bg-white hidden sm:flex">
+                    Make an appointment <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-vita-dark">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 p-6 flex flex-col gap-4 shadow-xl">
+            <a href="#services" class="text-lg font-medium">Services</a>
+            <a href="#specialists" class="text-lg font-medium">Specialists</a>
+            <a href="#works" class="text-lg font-medium">Our works</a>
+            <a href="#subscriptions" class="text-lg font-medium">Subscriptions</a>
+            <a href="#about" class="text-lg font-medium">About</a>
+            <a href="#" class="btn-vita bg-vita-dark text-white justify-center mt-4">Make an appointment</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="home" class="max-w-7xl mx-auto px-6 py-6 md:py-12">
+            <div class="relative rounded-[2rem] overflow-hidden min-h-[400px] md:min-h-[650px] group bg-vita-dark">
+                <!-- Background Image -->
+                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=2000&auto=format&fit=crop"
+                    alt="Beauty Professional"
+                    class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+                <div class="absolute top-12 left-12 max-w-sm hidden lg:block animate-fade-in-up">
+                    <p class="text-white/80 text-xs leading-relaxed">
+                        VITA blends health and beauty with expert cosmetic treatments. We focus on skin rejuvenation and
+                        vitality, offering facials, injectables, and laser therapies to enhance your natural radiance.
+                    </p>
+                </div>
+
+                <!-- Floating Circle -->
+
+
+                <div class="absolute bottom-12 left-8 md:left-12 right-12">
+                    <h1
+                        class="text-white text-4xl md:text-8xl font-serif italic leading-[1.1] animate-fade-in-up delay-300">
+                        Trust your beauty <span class="not-italic">to professionals</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                <div class="space-y-2 animate-fade-in-up">
+                    <p class="text-4xl md:text-7xl font-serif">20</p>
+                    <p class="text-[10px] md:text-sm opacity-60 uppercase tracking-widest">experienced<br>doctors</p>
+                </div>
+                <div class="space-y-2 animate-fade-in-up delay-100">
+                    <p class="text-4xl md:text-7xl font-serif">15k+</p>
+                    <p class="text-[10px] md:text-sm opacity-60 uppercase tracking-widest">satisfied<br>patients</p>
+                </div>
+                <div class="space-y-2 animate-fade-in-up delay-200">
+                    <p class="text-4xl md:text-7xl font-serif">10</p>
+                    <p class="text-[10px] md:text-sm opacity-60 uppercase tracking-widest">years<br>experience</p>
+                </div>
+                <div class="space-y-2 animate-fade-in-up delay-300">
+                    <p class="text-4xl md:text-7xl font-serif">18</p>
+                    <p class="text-[10px] md:text-sm opacity-60 uppercase tracking-widest">modern<br>devices</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialists Section -->
+        <section id="specialists" class="max-w-7xl mx-auto px-6 py-20 bg-white/30 rounded-[3rem]">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-xl space-y-4">
+                    <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">OUR EXPERTS</p>
+                    <h2 class="text-4xl md:text-6xl font-serif">Meet our top specialists</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Specialist 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1594744803329-a584af1cae24?q=80&w=1000&auto=format&fit=crop"
+                            alt="Dr. Elena Smith"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-serif">Dr. Elena Smith</h3>
+                            <p class="text-sm opacity-50 uppercase tracking-widest mt-1">Dermatologist</p>
+                        </div>
+                        <span
+                            class="w-10 h-10 border border-vita-dark/10 rounded-full flex items-center justify-center group-hover:bg-vita-dark group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Specialist 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?q=80&w=1000&auto=format&fit=crop"
+                            alt="Marcus Vane"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-serif">Marcus Vane</h3>
+                            <p class="text-sm opacity-50 uppercase tracking-widest mt-1">Stylist Expert</p>
+                        </div>
+                        <span
+                            class="w-10 h-10 border border-vita-dark/10 rounded-full flex items-center justify-center group-hover:bg-vita-dark group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Specialist 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop"
+                            alt="Sarah Chen"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-serif">Sarah Chen</h3>
+                            <p class="text-sm opacity-50 uppercase tracking-widest mt-1">Cosmetologist</p>
+                        </div>
+                        <span
+                            class="w-10 h-10 border border-vita-dark/10 rounded-full flex items-center justify-center group-hover:bg-vita-dark group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="works" class="max-w-7xl mx-auto px-6 py-24 text-center space-y-12">
+            <div class="space-y-4">
+                <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">VITA TECHNOLOGIES</p>
+                <h2 class="text-4xl md:text-7xl font-serif italic">Modern-and-safe</h2>
+            </div>
+
+            <div class="max-w-2xl mx-auto space-y-6">
+                <p class="text-sm md:text-base opacity-60 leading-relaxed">
+                    We use only high-quality and proven technologies and devices that have passed all necessary tests
+                    and certifications.
+                </p>
+
+                <div class="pt-4">
+                    <a href="#" class="btn-vita inline-flex mx-auto scale-110">
+                        Learn more about technologies <i
+                            class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 items-end">
+                <div class="rounded-3xl overflow-hidden aspect-[4/5] animate-fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000&auto=format&fit=crop"
+                        alt="Salon Treatment" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-3xl overflow-hidden aspect-video md:aspect-[4/3] animate-fade-in-up delay-150">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop"
+                        alt="Professional Equipment" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-3xl overflow-hidden aspect-[4/5] animate-fade-in-up delay-300">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop"
+                        alt="Salon Interior" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="subscriptions" class="max-w-7xl mx-auto px-6 py-20">
+            <div
+                class="bg-vita-dark rounded-[3rem] p-12 md:p-24 text-white flex flex-col items-center text-center space-y-8 overflow-hidden relative">
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-vita-beige/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-vita-beige/10 rounded-full blur-3xl"></div>
+
+                <h2 class="text-4xl md:text-6xl font-serif max-w-2xl">Subscribe to our newsletter for beauty tips</h2>
+                <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md mt-4">
+                    <input type="email" placeholder="Your email address"
+                        class="bg-white/10 border border-white/20 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-white/50 flex-1">
+                    <button
+                        class="bg-vita-beige text-vita-dark font-semibold rounded-full px-8 py-3 text-sm hover:scale-105 transition-transform duration-300">Subscribe</button>
+                </div>
+                <p class="text-xs opacity-40">By subscribing you agree with our Privacy Policy</p>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between border-t border-vita-dark/5 gap-8">
+        <div class="flex items-center gap-2 group cursor-pointer">
+            <div
+                class="w-10 h-10 bg-vita-dark rounded-full flex items-center justify-center -rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                <div class="w-5 h-5 border-2 border-white rounded-full border-t-transparent animate-spin-slow"></div>
+            </div>
+            <span class="text-sm font-medium tracking-tight">visit ronasit.com</span>
+        </div>
+
+        <nav class="flex gap-8 text-xs font-semibold uppercase tracking-widest opacity-60">
+            <a href="#" class="hover:opacity-100 transition-opacity">Instagram</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Facebook</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Twitter</a>
+        </nav>
+
+        <p class="text-[10px] opacity-40 uppercase tracking-widest">&copy; 2026 VITA SALON. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        // Scroll effect for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking on links
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+    <style>
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 8s linear infinite;
+        }
+    </style>
+</body>
+
+</html>

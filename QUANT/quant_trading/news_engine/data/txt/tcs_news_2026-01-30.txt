@@ -1,0 +1,806 @@
+TITLE: How and why I've migrated from from Google to Proton
+DATE: 2026-01-28T20:37:00Z
+SOURCE: Dougbelshaw.com
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.6 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Doug Belshaw, 
+Open Thinkering, 
+Jan 28, 2026
+
+
+ 
+ 
+I haven't made the switch from Google to Proton but I'm considering it. So long as I was employed at NRC I had to keep one foot in the Microsoft ecosystem (and especially Outlook). When I retire I can manag…
+--------------------------------------------------------------------------------
+TITLE: Exhibits and a new studio space let you warm-up with art!
+DATE: 2026-01-28T17:45:43Z
+SOURCE: ARLnow
+SENTIMENT: positive (score=0.51)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.146
+CONTENT: This column is sponsored by Arlington Arts/Arlington Cultural Affairs, a division of Arlington Economic Development. Few things are more comforting in cold weather than steaming hot cocoa or mulled cider. For a unique mug to sip from, and other locally made a…
+--------------------------------------------------------------------------------
+TITLE: 11 Steps to Build a Strong Online Presence for Your New Business: Lessons from Founders
+DATE: 2026-01-28T16:00:00Z
+SOURCE: Wordpress.com
+SENTIMENT: positive (score=0.72)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.206
+CONTENT: Every founder launching online faces the same question: Where do I even start? We gathered insights from founders and experts who've been exactly where you are. Here's what they wish they'd known from day one.
+--------------------------------------------------------------------------------
+TITLE: What Does OpenAI And Anthropic’s Healthcare Push Mean For The Industry?
+DATE: 2026-01-28T15:02:00Z
+SOURCE: MedCity News
+SENTIMENT: negative (score=-0.18)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: -0.051
+CONTENT: As OpenAI and Anthropic move deeper into healthcare, experts say AI chatbots are becoming the new front door to medicine. This shift is shaking things up for some health tech startups, redefining the patient-provider relationship, and intensifying debates ove…
+--------------------------------------------------------------------------------
+TITLE: Leading AI with ethics: The new governance mandate
+DATE: 2026-01-28T15:00:00Z
+SOURCE: Techtarget.com
+SENTIMENT: positive (score=0.87)
+IMPORTANCE: 0.7 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.436
+CONTENT: Ethical AI governance is now a boardroom priority, enabling organizations to curb bias, ensure accountability and build trust as a strategic advantage.
+--------------------------------------------------------------------------------
+TITLE: Integration of 2D and 3D design in process engineering
+DATE: 2026-01-28T14:07:55Z
+SOURCE: Slashdot.org
+SENTIMENT: positive (score=0.83)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.237
+CONTENT: Cambridge, UK and Pittsford, NY – 28 January 2026: Integrating 2D and 3D design data is a decisive step in optimising process eIntengineering systems. Modern software solutions offer decisive advantages here.gration of 2D and 3D design in process engineeringP…
+--------------------------------------------------------------------------------
+TITLE: Shadowfax IPO fails to deliver; Indian AI founders eye US move
+DATE: 2026-01-28T13:45:13Z
+SOURCE: The Times of India
+SENTIMENT: negative (score=-0.25)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: -0.072
+CONTENT: Logistics company Shadowfax made a lukewarm debut at the bourses. This and more in today’s ETtech Top 5.
+--------------------------------------------------------------------------------
+TITLE: Orb Strategies Kicks Off 2026 With New Investment Venues
+DATE: 2026-01-28T13:15:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.6 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Orb Strategies is a global financial consultancy providing advisory, guidance, and analytical services to individuals and organizations....
+--------------------------------------------------------------------------------
+TITLE: U.S.-India trade talks could get a boost as America sees life going on without it
+DATE: 2026-01-28T11:32:16Z
+SOURCE: CNBC
+SENTIMENT: positive (score=0.40)
+IMPORTANCE: 0.8 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.230
+CONTENT: There could be a renewed push to conclude a U.S.-India trade deal, analysts say, as the White House sees other countries signing trade deals.
+--------------------------------------------------------------------------------
+TITLE: Keir Starmer wants UK Plc to win over China’s Xi without annoying Trump
+DATE: 2026-01-28T11:27:53Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.92)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.264
+CONTENT: British Prime Minister Keir Starmer is in Beijing to boost trade with China. He aims to expand export business for British industries. Starmer is navigating a delicate balance between China and the United States. He is accompanied by business and cultural lea…
+--------------------------------------------------------------------------------
+TITLE: Texas halts H-1B visas at State universities, agencies; to affect Indian workers
+DATE: 2026-01-28T11:11:54Z
+SOURCE: BusinessLine
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Texas Governor Greg Abbott has ordered state agencies and public universities to immediately halt new H-1B visa petitions, tightening hiring rules at taxpayer-funded institutions, a step likely to impact Indian professionals.
+--------------------------------------------------------------------------------
+TITLE: Hexaware is the Second-Fastest-Growing Indian IT Services Brand by Brand Value
+DATE: 2026-01-28T10:57:57Z
+SOURCE: BusinessLine
+SENTIMENT: positive (score=0.59)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.168
+CONTENT: Hexaware is the Second-Fastest-Growing Indian IT Services Brand by Brand Value
+--------------------------------------------------------------------------------
+TITLE: Automation COE Industry Research 2025 - Global Market Size, Share, Trends, Opportunities, and Forecasts, 2020-2024 & 2025-2030
+DATE: 2026-01-28T09:56:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.89)
+IMPORTANCE: 0.6 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.381
+CONTENT: The Automation COE Market offers opportunities in enhancing operational efficiency, cost reduction, and process standardization across industries like banking, healthcare, and IT. By centralizing automation expertise, organizations can implement AI and ML, st…
+--------------------------------------------------------------------------------
+TITLE: Automation Testing Industry Research 2026 - Global Market Size, Share, Trends, Opportunities, and Forecasts, 2021-2025 & 2026-2031
+DATE: 2026-01-28T09:36:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.83)
+IMPORTANCE: 0.6 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.356
+CONTENT: Opportunities in the Global Automation Testing Market include leveraging AI/ML for efficient test automation and capitalizing on the demand for cloud-based infrastructures. The rise of low-code tools democratizes testing, while the adoption of QAOps and DevSe…
+--------------------------------------------------------------------------------
+TITLE: Ajit Pawar’s plane flew for around 35 minutes before crashing; belonged to Delhi-based charter operator VSR
+DATE: 2026-01-28T05:26:44Z
+SOURCE: The Indian Express
+SENTIMENT: positive (score=0.34)
+IMPORTANCE: 0.7 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.171
+CONTENT: Along with Pawar, there were four others on board the ill-fated aircraft — Pawar’s personal security officer, one attendant, and two pilots.
+--------------------------------------------------------------------------------
+TITLE: TCS CEO K Krithivasan says AI will not trigger mass layoffs: FT report
+DATE: 2026-01-28T04:35:37Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.44)
+IMPORTANCE: 0.7 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.221
+CONTENT: Speaking to the Financial Times, Krithivasan said he does not expect AI to upend the global outsourcing industry, currently valued at $300 billion, noting that enterprises will continue to rely on large technology vendors to manage complex systems even as aut…
+--------------------------------------------------------------------------------
+TITLE: Office leasing in Delhi NCR rises to a new record in 2025
+DATE: 2026-01-28T03:18:09Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.72)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.206
+CONTENT: Delhi-NCR office space leasing reached an all-time high in 2025.  Leasing grew by 24% from the previous year.  The opening of Noida airport significantly boosted growth.  IT-BPM sector led demand.  Demand spread to new areas like Noida and Gurugram corridors.…
+--------------------------------------------------------------------------------
+TITLE: TCS bets $37 million on new Brazil tech campus
+DATE: 2026-01-28T02:48:26Z
+SOURCE: The Times of India
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.000
+CONTENT: The company said the facility will be set up in Londrina, in the southern state of Parana, with an initial investment of about $37 million. The campus is expected to generate more than 1,600 new jobs over time.
+--------------------------------------------------------------------------------
+TITLE: Buzzing stocks today: Hindustan Zinc, TCS, Tata Power, LIC, Bajaj Finance in focus
+DATE: 2026-01-28T01:49:00Z
+SOURCE: BusinessLine
+SENTIMENT: positive (score=0.10)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.029
+CONTENT: Hindustan Zinc plans a ₹4,600 crore OFS, TCS invests ₹330 crore in Brazil, Tata Power expands IoT offerings, LIC buys Bajaj Finance debentures, while Titagarh Rail, RVNL, ESAF Small Finance and Caplin Point post key business updates.
+--------------------------------------------------------------------------------
+TITLE: Texas halts new H-1B visas at public universities and state agencies
+DATE: 2026-01-28T01:33:42Z
+SOURCE: BusinessLine
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Texas Governor Greg Abbott has ordered a pause on new H-1B visas at public universities and state agencies until 2027, citing jobs for locals and visa misuse.
+--------------------------------------------------------------------------------
+TITLE: Law firms are cashing in as India’s data centre expansion accelerates
+DATE: 2026-01-28T00:31:00Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.69)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.198
+CONTENT: As the country expands its digital infrastructure to support AI and data storage, legal work related to data centers has increased. Lawyers say their responsibilities now include everything from land and power planning to obtaining regulatory approvals, secur…
+--------------------------------------------------------------------------------
+TITLE: India-EU FTA set to boost services, digital trade and skilled worker mobility
+DATE: 2026-01-28T00:30:00Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.96)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.277
+CONTENT: India’s free trade agreement with the EU is set to boost services, digital trade, and skilled worker mobility. It offers Indian IT firms greater market access, legal certainty for cross-border operations, and opportunities in AI, clean tech, and R&D partnersh…
+--------------------------------------------------------------------------------
+TITLE: Texas Gov. Greg Abbott halts new H-1B visa petitions at state agencies and universities
+DATE: 2026-01-27T23:57:52Z
+SOURCE: ABC News
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.72
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Gov. Greg Abbott ordered Texas universities and state agencies on Tuesday to halt new H-1B visa petitions until next year
+--------------------------------------------------------------------------------
+TITLE: Dario Amodei warns AI may cause ‘unusually painful’ disruption to jobs
+DATE: 2026-01-27T17:56:00Z
+SOURCE: CNBC
+SENTIMENT: neutral (score=-0.03)
+IMPORTANCE: 0.7 | DECAY: 0.51
+BEHAVIOURAL SCORE: -0.009
+CONTENT: "The pace of progress in AI is much faster than for previous technological revolutions," the Antrhopic CEO said in latest comments about AI's impact on jobs.
+--------------------------------------------------------------------------------
+TITLE: Self-Disruption At 330 Years Old: A Swedish Business Case Study
+DATE: 2026-01-27T17:17:24Z
+SOURCE: Brandingstrategyinsider.com
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Picture a golf course at dawn. Traditionally, you’d hear the rumble of diesel engines as heavy mowers lumber across fairways, compacting soil and guzzling fuel. At Royal Porthcawl in South Wales, site of the 2024 Women’s British Open, something different happ…
+--------------------------------------------------------------------------------
+TITLE: Microsoft announces the 2026 Security Excellence Awards winners
+DATE: 2026-01-27T17:00:00Z
+SOURCE: Microsoft.com
+SENTIMENT: positive (score=0.99)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.204
+CONTENT: Congratulations to the winners of the 2026 Microsoft Security Excellence Awards that recognize the innovative defenders who have gone above and beyond.
+The post Microsoft announces the 2026 Security Excellence Awards winners appeared first on Microsoft Securi…
+--------------------------------------------------------------------------------
+TITLE: SC settles GST dispute, backs refunds for education consultants to foreign universities
+DATE: 2026-01-27T16:46:58Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.38)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.078
+CONTENT: The Supreme Court has ruled that educational consultancy services provided to foreign universities on a principal-to-principal basis are considered exports, eligible for GST refunds. This decision clarifies that such service providers are not intermediaries, …
+--------------------------------------------------------------------------------
+TITLE: Modernized big data architecture a must for AI to deliver
+DATE: 2026-01-27T15:35:00Z
+SOURCE: Techtarget.com
+SENTIMENT: positive (score=0.75)
+IMPORTANCE: 1.0 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.383
+CONTENT: Many enterprises put AI into production in 2025 but found their legacy data stacks stalled progress. See what it takes to modernize big data systems for better AI results.
+--------------------------------------------------------------------------------
+TITLE: Winterberry Group Documents Burgeoning ‘Creative Intelligence’ Market for Advertising
+DATE: 2026-01-27T14:15:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.90)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.185
+CONTENT: With speed, U.S. and U.K. brands are implementing creative intelligence (CI) solutions and platforms to take greater control of their creative investments.
+--------------------------------------------------------------------------------
+TITLE: Vodafone Business lands digital services deal with Centrica
+DATE: 2026-01-27T13:52:15Z
+SOURCE: TelecomTV
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.8 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Centrica, the parent company of British Gas and Hive, has turned to Vodafone Business for a digital transformationThe enterprise service provider will deliver …
+--------------------------------------------------------------------------------
+TITLE: After Decades of Deflection, ExxonMobil Moves to Reshape Global Climate Accounting
+DATE: 2026-01-27T12:22:10Z
+SOURCE: Resilience
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.3 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.000
+CONTENT: An ExxonMobil-backed initiative, Carbon Measures, is pushing to reshape how the world does the math on climate change. Their system, outside analysts point out, leaves consumers holding the bag.
+--------------------------------------------------------------------------------
+TITLE: Envelope Tracking Chips Market Worth $2.65 Billion in 2026 is Set to Reach $3.81 Billion by 2030: New Report Highlights Emerging Revenue and Investment Opportunities
+DATE: 2026-01-27T11:39:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.93)
+IMPORTANCE: 1.0 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.476
+CONTENT: The market is poised for significant growth due to factors such as the expansion of 5G networks, demand for efficient RF solutions, IoT applications, and evolving AI technologies. Emerging trends include AI-driven signal optimization and cloud-connected archi…
+--------------------------------------------------------------------------------
+TITLE: Integrated Circuits Market Report 2026: IoT Adoption Fuels Boom in Integrated Circuits Market Growth, Witness 9.2% CAGR During 2026-2030
+DATE: 2026-01-27T11:18:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.85)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.174
+CONTENT: Expansion in semiconductor fabrication, industrial automation, and IC innovations like AI-optimized architectures present growth potential Expansion in semiconductor fabrication, industrial automation, and IC innovations like AI-optimized architectures presen…
+--------------------------------------------------------------------------------
+TITLE: Sylvester Stallone-Backed AI Solutions Provider Largo Acquires E-Poll Market Research
+DATE: 2026-01-27T09:22:48Z
+SOURCE: Deadline
+SENTIMENT: positive (score=0.46)
+IMPORTANCE: 0.8 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.191
+CONTENT: EXCLUSIVE: Largo, the AI-solutions company backed by Sylvester Stallone, has acquired U.S. consumer research and market insights firm E-Poll Market Research. The deal will look to redefine how brands, studios, agencies and advertisers understand and anticipat…
+--------------------------------------------------------------------------------
+TITLE: Brian (bex) Exelbierd: On EU Open Source Procurement: A Layered Approach
+DATE: 2026-01-27T08:10:00Z
+SOURCE: Bexelbie.com
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.000
+CONTENT: 
+--------------------------------------------------------------------------------
+TITLE: ASML rides Nvidia's coattails with lasers and huge chip 'printers'
+DATE: 2026-01-27T06:20:03Z
+SOURCE: Yahoo Entertainment
+SENTIMENT: positive (score=0.66)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.135
+CONTENT: By Toby Sterling and Nathan Vifflin AMSTERDAM, Jan 27 (Reuters) - As artificial intelligence firms jostle for the Nvidia chips needed to power the AI boom...
+--------------------------------------------------------------------------------
+TITLE: Cirium Ascend Consultancy Named Appraiser of the Year at the Aviation 100 Awards for a Record 11th Time
+DATE: 2026-01-27T06:08:48Z
+SOURCE: Financial Post
+SENTIMENT: positive (score=0.78)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.160
+CONTENT: The fourth consecutive win recognizes Cirium’s position as the industry’s foremost provider of accurate, transparent aircraft valuations to the aviation finance and leasing sector. DUBLIN — Cirium Ascend Consultancy has been named Appraiser of the Year 2026 i…
+--------------------------------------------------------------------------------
+TITLE: Big Tech’s AI data center push is spawning a new heat economy
+DATE: 2026-01-27T06:05:17Z
+SOURCE: CNBC
+SENTIMENT: positive (score=0.51)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.105
+CONTENT: AI’s energy problem may also be its solution, as cities are increasingly exploring opportunities to repurpose excess heat from data centers.
+--------------------------------------------------------------------------------
+TITLE: ASML rides Nvidia's coattails with lasers and huge chip 'printers'
+DATE: 2026-01-27T06:01:45Z
+SOURCE: Yahoo Entertainment
+SENTIMENT: positive (score=0.66)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.135
+CONTENT: As artificial intelligence firms jostle for the Nvidia chips needed to power the AI boom, Dutch firm ASML has carved out a key niche in the supply chain...
+--------------------------------------------------------------------------------
+TITLE: Can Amazon Differentiate As A Big-Box Retailer?
+DATE: 2026-01-26T23:11:37Z
+SOURCE: Brandingstrategyinsider.com
+SENTIMENT: positive (score=0.40)
+IMPORTANCE: 0.4 | DECAY: 0.51
+BEHAVIOURAL SCORE: 0.083
+CONTENT: Once again, Amazon is startling the retail landscape. Now, it is the arrival of a big brick-and-mortar store: 230,000 square feet. The reporters say this square footage is about the size of two Target stores and larger than an average Walmart. This new Amazon…
+--------------------------------------------------------------------------------
+TITLE: These Companies—Palantir, AT&T, Deloitte—Have The Biggest ICE Contracts As DHS Funding Under Fire
+DATE: 2026-01-26T19:33:59Z
+SOURCE: Forbes
+SENTIMENT: negative (score=-0.87)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: -0.127
+CONTENT: Demonstrations have demanded an end to federal funding for ICE, after two protesters were killed by federal agents in Minneapolis.
+--------------------------------------------------------------------------------
+TITLE: Budget wish-list: Space startups want critical infrastructure tag, assured govt demand
+DATE: 2026-01-26T19:14:07Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.27)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: 0.040
+CONTENT: Union Budget 2026: India's emerging private space sector is urging the government to classify space assets as critical infrastructure. This move aims to unlock low-cost financing and boost private investment. Companies are requesting government funding to pro…
+--------------------------------------------------------------------------------
+TITLE: Ipsos MMA Named a Leader in Marketing Measurement and Optimization Services, Q1 2026 Report by Independent Research Firm
+DATE: 2026-01-26T17:21:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.82)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: 0.121
+CONTENT: Global Analytics Firm Receives Highest Possible Scores in 20 Criteria, Named a Customer Favorite Global Analytics Firm Receives Highest Possible Scores in 20 Criteria, Named a Customer Favorite
+--------------------------------------------------------------------------------
+TITLE: Lease roundup: Mary Lou’s coming to the W, Nude Miami to Brickell and Midorie to Fort Lauderdale
+DATE: 2026-01-26T15:30:00Z
+SOURCE: The Real Deal
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Mary Lou’s Miami | Miami Beach Mary Lou’s, a venue that combines supper club vibes with hedonism, will open in South Beach.  Mary Lou’s Miami leased the former Wall nightclub space, which spans about 3,500 square feet, at the W South Beach hotel, according to…
+--------------------------------------------------------------------------------
+TITLE: Nicaragua – The Challenge of a People as President
+DATE: 2026-01-26T14:12:21Z
+SOURCE: Globalresearch.ca
+SENTIMENT: negative (score=-0.77)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: -0.114
+CONTENT: For anyone who has witnessed Nicaragua’s development since the destruction and losses caused by the US terrorist war of the 1980s, the country has unquestionably become a dynamic modern society with strong social cohesion and a robust, competitive economy. Ni…
+--------------------------------------------------------------------------------
+TITLE: Budget 2026: Space industry seeks assured government demand, infra status
+DATE: 2026-01-26T10:11:08Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.57)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: 0.084
+CONTENT: Budget 2026: India's emerging private space sector is urging the government to classify space assets as critical infrastructure. This move aims to unlock crucial funding and encourage procurement of domestic products and services. Industry leaders believe thi…
+--------------------------------------------------------------------------------
+TITLE: Your boss is about to pull back your gym benefits
+DATE: 2026-01-26T09:07:01Z
+SOURCE: Business Insider
+SENTIMENT: positive (score=0.93)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: 0.137
+CONTENT: Employers are saving money by scaling back on wellness benefits for their employees, like gym membership discounts and free fitness apps.
+--------------------------------------------------------------------------------
+TITLE: Nearly 70% of Hospitality Sector Now Committed to Use Only Cage-Free Eggs, New Industry Report Finds
+DATE: 2026-01-26T07:30:22Z
+SOURCE: Hospitality Net
+SENTIMENT: positive (score=0.54)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: 0.080
+CONTENT: The country’s hospitality sector has reached new heights in sustainable food sourcing, with a large majority of leading hotel groups now pledged to shift to sourcing only cage-free eggs for their food operations, according to a comprehensive new assessment re…
+--------------------------------------------------------------------------------
+TITLE: Oberstown youth detention centre spent €84,000 on unsuccessful attempt to fill one role
+DATE: 2026-01-26T06:00:00Z
+SOURCE: The Irish Times
+SENTIMENT: negative (score=-0.61)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: -0.090
+CONTENT: Expenditure of €230,000, over two years, related to vacant human resources role took place outside official procurement process
+--------------------------------------------------------------------------------
+TITLE: It's Time!
+DATE: 2026-01-26T03:10:00Z
+SOURCE: Minethatdata.com
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.6 | DECAY: 0.37
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Database Marketing, Data Mining, Analytics, Big Data, Forecasting, Segmentation, Predictive Modeling, Measurement, Catalog, Business
+--------------------------------------------------------------------------------
+TITLE: TCS is all set to seek ‘consent manager’ permit under DPDP
+DATE: 2026-01-26T00:30:00Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.68)
+IMPORTANCE: 0.4 | DECAY: 0.37
+BEHAVIOURAL SCORE: 0.100
+CONTENT: TCS is preparing to seek a ‘consent manager’ permit under India’s new Digital Personal Data Protection rules, joining Reliance Jio in a growing market. The data protection regime could create a Rs 10,000-crore compliance-as-a-service opportunity over three ye…
+--------------------------------------------------------------------------------
+TITLE: Ogun IRS dismisses speculation, explains tax reform laws
+DATE: 2026-01-26T00:10:30Z
+SOURCE: The Punch
+SENTIMENT: positive (score=0.64)
+IMPORTANCE: 1.0 | DECAY: 0.37
+BEHAVIOURAL SCORE: 0.234
+CONTENT: Ogun State’s Internal Revenue Service clarifies the 2025 Tax Reform Acts, aiming to build trust, simplify laws, and modernize compliance for taxpayers.
+
+Read More: https://punchng.com/ogun-irs-dismisses-speculation-explains-tax-reform-laws/
+--------------------------------------------------------------------------------
+TITLE: Indian IT’s mega deals spike on AI push, but there’s not much to celebrate yet
+DATE: 2026-01-26T00:00:47Z
+SOURCE: Livemint
+SENTIMENT: negative (score=-0.55)
+IMPORTANCE: 0.8 | DECAY: 0.37
+BEHAVIOURAL SCORE: -0.162
+CONTENT: TCS, Cognizant and Infosys reported billion-dollar contracts but analysts say Fortune companies are reducing the number of IT vendors they work with to reduce their long-term software services costs.
+--------------------------------------------------------------------------------
+TITLE: Infosys caps WFO exemption at 5 days a quarter after Wipro & TCS tighten WFH norms
+DATE: 2026-01-25T17:19:35Z
+SOURCE: The Times of India
+SENTIMENT: negative (score=-0.15)
+IMPORTANCE: 0.4 | DECAY: 0.26
+BEHAVIOURAL SCORE: -0.016
+CONTENT: Infosys has restricted extra work-from-home days, allowing only limited exceptions with proof. Staff must mostly attend offices, following similar moves by TCS and Wipro. Industry experts say the need for a better collaborative environment amid rapidly shifti…
+--------------------------------------------------------------------------------
+TITLE: New Skills, New Stakes: AI reshapes IT salaries and job security
+DATE: 2026-01-25T11:08:19Z
+SOURCE: BusinessLine
+SENTIMENT: positive (score=0.61)
+IMPORTANCE: 0.4 | DECAY: 0.26
+BEHAVIOURAL SCORE: 0.065
+CONTENT: Generative AI Engineering and Machine Learning Operation roles set new salary benchmarks, with senior professionals earning ₹58–60 LPA and annual growth exceeded 18 per cent in GCCs
+--------------------------------------------------------------------------------
+TITLE: Reliance Biggest Laggard As Most Top 10 Companies Lose Value This Week
+DATE: 2026-01-25T07:25:01Z
+SOURCE: Ndtvprofit.com
+SENTIMENT: positive (score=0.20)
+IMPORTANCE: 0.4 | DECAY: 0.26
+BEHAVIOURAL SCORE: 0.021
+CONTENT: The market valuation of Reliance Industries tumbled Rs 0.97 lakh crore to Rs 18.76 lakh crore. ICICI Bank&#039;s valuation eroded by Rs 0.49 lakh crore to Rs 9.61 lakh crore.
+--------------------------------------------------------------------------------
+TITLE: Mcap of 9 of top-10 most valued firms plunges by ₹2.51 lakh crore; Reliance biggest laggard
+DATE: 2026-01-25T07:07:48Z
+SOURCE: BusinessLine
+SENTIMENT: positive (score=0.75)
+IMPORTANCE: 0.4 | DECAY: 0.26
+BEHAVIOURAL SCORE: 0.079
+CONTENT: The combined market valuation of nine of the top-10 most valued firms, including Reliance Industries, HDFC Bank, ICICI Bank and Bharti Airtel, plunged by ₹2,51,711.6 crore
+--------------------------------------------------------------------------------
+TITLE: Market cap of 9 of top-10 most valued firms plunges by Rs 2.51 lakh cr; RIL biggest laggard
+DATE: 2026-01-25T06:58:52Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.54)
+IMPORTANCE: 0.4 | DECAY: 0.26
+BEHAVIOURAL SCORE: 0.057
+CONTENT: The combined market valuation of nine of the top-10 most valued firms slumped by Rs 2.51 lakh crore last week, with Reliance Industries taking the biggest hit, in line with a weak trend in equities.
+--------------------------------------------------------------------------------
+TITLE: Five ways weight-loss jabs are changing spending habits
+DATE: 2026-01-25T01:11:19Z
+SOURCE: BBC News
+SENTIMENT: positive (score=0.48)
+IMPORTANCE: 0.4 | DECAY: 0.26
+BEHAVIOURAL SCORE: 0.050
+CONTENT: With GLP-1 drugs rising in popularity, how are businesses adapting to a new type of consumer?
+--------------------------------------------------------------------------------
+TITLE: How Willy Chavarria Became As Popular As He Is Subversive
+DATE: 2026-01-23T23:12:49Z
+SOURCE: Vanity Fair
+SENTIMENT: positive (score=0.78)
+IMPORTANCE: 0.3 | DECAY: 0.19
+BEHAVIOURAL SCORE: 0.044
+CONTENT: The backstory behind Willy Chavarria’s knockout show featuring Mahmood, Feid, Mon Laferte, and more. “It will be like the Latin Grammys,” he promised Vanity Fair in an exclusive interview.
+--------------------------------------------------------------------------------
+TITLE: Metadata management moves to the center of AI scale challenges
+DATE: 2026-01-23T22:17:37Z
+SOURCE: SiliconANGLE News
+SENTIMENT: negative (score=-0.21)
+IMPORTANCE: 0.7 | DECAY: 0.19
+BEHAVIOURAL SCORE: -0.028
+CONTENT: Metadata management has become the practical dividing line between AI systems that scale and those that stall. As organizations push AI from experimentation into sustained production, the limiting factor is no longer models, but visibility into sprawling data…
+--------------------------------------------------------------------------------
+TITLE: Auto majors like Maruti, Tata, Mahindra to roll out over 30 new cars in 2026
+DATE: 2026-01-23T19:26:56Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.84)
+IMPORTANCE: 0.4 | DECAY: 0.14
+BEHAVIOURAL SCORE: 0.046
+CONTENT: In 2026, India's automotive landscape is set to witness a groundbreaking transformation with over 30 new vehicles hitting the market. Major players like Maruti Suzuki, Tata Motors, and Mahindra & Mahindra are at the forefront of this exciting evolution.
+--------------------------------------------------------------------------------
+TITLE: Tata Consultancy Services Announces Strategic Collaboration with Advanced Micro Devices (AMD)
+DATE: 2026-01-23T17:33:32Z
+SOURCE: Yahoo Entertainment
+SENTIMENT: positive (score=0.25)
+IMPORTANCE: 0.4 | DECAY: 0.14
+BEHAVIOURAL SCORE: 0.014
+CONTENT: 
+--------------------------------------------------------------------------------
+TITLE: Vietnam leader To Lam consolidates power as country targets 10% growth
+DATE: 2026-01-23T14:40:47Z
+SOURCE: NPR
+SENTIMENT: positive (score=0.78)
+IMPORTANCE: 0.4 | DECAY: 0.14
+BEHAVIOURAL SCORE: 0.042
+CONTENT: Lam, 68, pledged to accelerate economic growth and was reappointed unanimously by the 180-member Central Committee at the conclusion of the National Party Congress.
+--------------------------------------------------------------------------------
+TITLE: Beerajah Sswain joins NueGenM.AI as Chief Digital & Marketing Officer
+DATE: 2026-01-23T12:36:29Z
+SOURCE: Socialsamosa.com
+SENTIMENT: positive (score=0.64)
+IMPORTANCE: 0.4 | DECAY: 0.14
+BEHAVIOURAL SCORE: 0.034
+CONTENT: Sswain brings more than two decades of experience across digital marketing, growth strategy and advertising. Sswain is also the founder of growth consultancy BS Consult.
+--------------------------------------------------------------------------------
+TITLE: SOLO lifestyle bank
+DATE: 2026-01-23T11:00:33Z
+SOURCE: Retaildesignblog.net
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.14
+BEHAVIOURAL SCORE: 0.000
+CONTENT: SOLO by Bank of Georgia has opened a new Premium Banking Lounge in Batumi, introducing a fundamentally new approach to...
+--------------------------------------------------------------------------------
+TITLE: Digital Workplace Market Report 2026 - Global Industry Size, Share, Trends, Opportunity, and Forecast, 2021-2031
+DATE: 2026-01-23T10:54:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.93)
+IMPORTANCE: 0.6 | DECAY: 0.14
+BEHAVIOURAL SCORE: 0.076
+CONTENT: The digital workplace market is poised for growth driven by hybrid work adoption, AI in HR, and DEX strategies. Opportunities exist in unified communication systems, AI-driven productivity tools, and digital inclusion for frontline workers. Security challenge…
+--------------------------------------------------------------------------------
+TITLE: Adani Green Q3 profit plunges 99% despite strong revenue growth
+DATE: 2026-01-23T10:28:50Z
+SOURCE: BusinessLine
+SENTIMENT: positive (score=0.40)
+IMPORTANCE: 1.0 | DECAY: 0.14
+BEHAVIOURAL SCORE: 0.054
+CONTENT: Revenue from power supply rose 21 per cent, while total operating revenue increased 7.6 per cent to ₹2,837 crore, supported by higher generation and new capacity additions.
+--------------------------------------------------------------------------------
+TITLE: India's largest airlines sees shares drop after earnings plunge 78% on forex and other provisions
+DATE: 2026-01-23T08:29:05Z
+SOURCE: CNBC
+SENTIMENT: negative (score=-0.46)
+IMPORTANCE: 1.0 | DECAY: 0.14
+BEHAVIOURAL SCORE: -0.062
+CONTENT: Weak currency, labour reforms and passenger compensation costs dragged Indigo's earnings.
+--------------------------------------------------------------------------------
+TITLE: Hot School Meals: The intentions are good, but the delivery is poor
+DATE: 2026-01-23T07:00:48Z
+SOURCE: TheJournal.ie
+SENTIMENT: negative (score=-0.95)
+IMPORTANCE: 0.4 | DECAY: 0.14
+BEHAVIOURAL SCORE: -0.051
+CONTENT: Jen Cummins says the programme is built on the right principle, but food waste, poor design and a one-size-fits-all approach risk undermining children’s health and learning.
+--------------------------------------------------------------------------------
+TITLE: Sensex, Nifty pare opening gains amid FII selling pressure
+DATE: 2026-01-23T05:06:51Z
+SOURCE: BusinessLine
+SENTIMENT: positive (score=0.70)
+IMPORTANCE: 0.4 | DECAY: 0.14
+BEHAVIOURAL SCORE: 0.038
+CONTENT: Benchmark stock indices Sensex and Nifty pared opening gains to trade lower in the early session on Friday amid sustained selling by foreign institutional investors.
+--------------------------------------------------------------------------------
+TITLE: The fog between agencies and clients around data just keeps getting thicker: ID Comms report
+DATE: 2026-01-23T05:01:00Z
+SOURCE: Digiday
+SENTIMENT: negative (score=-0.18)
+IMPORTANCE: 0.4 | DECAY: 0.14
+BEHAVIOURAL SCORE: -0.010
+CONTENT: Agencies blame clients for being so silo’d that the agency doesn’t have clarity on client data, arguably the lifeblood of modern digital marketing.
+--------------------------------------------------------------------------------
+TITLE: Mphasis Q3 profit up 3.5% YoY to Rs 442 crore
+DATE: 2026-01-23T00:30:00Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.87)
+IMPORTANCE: 1.0 | DECAY: 0.14
+BEHAVIOURAL SCORE: 0.117
+CONTENT: Indian mid-tier IT firms showed mixed performance in Q3 FY26, affected by seasonal softness and labour code changes. Mphasis posted a 3.3% YoY profit rise to Rs 442 crore, while Cyient’s profit fell 25% to Rs 91.8 crore. AI-led deals and BFSI growth helped of…
+--------------------------------------------------------------------------------
+TITLE: Stock market today: Dow, S&P 500, Nasdaq futures stall after volatile week as Intel earnings fall short
+DATE: 2026-01-22T23:41:47Z
+SOURCE: Yahoo Entertainment
+SENTIMENT: negative (score=-0.20)
+IMPORTANCE: 1.0 | DECAY: 0.14
+BEHAVIOURAL SCORE: -0.027
+CONTENT: Wall Street is regrouping after a rollercoaster week defined by Trump's on-and-off messages regarding Greenland.
+--------------------------------------------------------------------------------
+TITLE: The era of the Small Giant
+DATE: 2026-01-22T20:00:00Z
+SOURCE: Changelog.com
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Damien Tanner (founder of Pusher, now building Layercode) is back for a reunion 17 years in the making. Damien officially returns to The Changelog to discuss the seismic shift happening in software development. From the first sponsor of the podcast to frontli…
+--------------------------------------------------------------------------------
+TITLE: Despite promises that AI will create more jobs, 1.2 million jobs were actually slashed last year
+DATE: 2026-01-22T16:29:52Z
+SOURCE: Fortune
+SENTIMENT: negative (score=-0.49)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: -0.019
+CONTENT: The tech industry announced 155,000 job cuts in 2025, up 15% from the year before, as the sector implements AI “much more quickly than any other industry.”
+--------------------------------------------------------------------------------
+TITLE: The leverage that Europe has over the US economy
+DATE: 2026-01-22T16:06:08Z
+SOURCE: The Times of India
+SENTIMENT: negative (score=-0.42)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: -0.016
+CONTENT: Following recent transatlantic turmoil, European officials are exploring economic leverage against the U.S.  They are considering actions like selling U.S. bonds and targeting the services trade, though the effectiveness of these threats remains a key questio…
+--------------------------------------------------------------------------------
+TITLE: Knowledge Process Outsourcing Market - Global Industry Size, Share, Trends, Opportunity, and Forecast, 2021-2031
+DATE: 2026-01-22T15:27:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.83)
+IMPORTANCE: 0.6 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.048
+CONTENT: The Knowledge Process Outsourcing (KPO) market offers opportunities in advanced analytics, AI-led automation, and demand for specialized finance and legal expertise. Growth is driven by cost efficiencies and access to global talent, but faces challenges due t…
+--------------------------------------------------------------------------------
+TITLE: What’s up with… French telco M&A, Verizon, Telefónica
+DATE: 2026-01-22T15:04:57Z
+SOURCE: TelecomTV
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.8 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.000
+CONTENT: Orange, Iliad, Bouygues still in talks for Altice acquisitionVerizon completes $20bn acquisitionTelefónica CEO talks cybersecurity at Davos
+--------------------------------------------------------------------------------
+TITLE: Where is the US-China AI 'race' heading in 2026?
+DATE: 2026-01-22T14:50:00Z
+SOURCE: DW (English)
+SENTIMENT: positive (score=0.66)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.026
+CONTENT: With American tech continuing to dominate developing the frontier of artificial intelligence, China is holding its own with globally popular cheaper models and plans for building an AI-powered economy in the near future. One year ago this week, Silicon Valley…
+--------------------------------------------------------------------------------
+TITLE: Malaysia's 'aggressive' move to double minimum expatriate salaries sends 'strong' signal to hire local
+DATE: 2026-01-22T13:00:00Z
+SOURCE: CNA
+SENTIMENT: positive (score=0.59)
+IMPORTANCE: 0.3 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.017
+CONTENT: Some employers are considering a “thorough review” of salary structures for current and future expatriates and, if necessary, the relocation of certain roles or workers to other countries.
+--------------------------------------------------------------------------------
+TITLE: Mphasis meets third-quarter revenue estimates as banks resume tech spending
+DATE: 2026-01-22T12:42:28Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.68)
+IMPORTANCE: 1.0 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.066
+CONTENT: Indian information technology company Mphasis reported third-quarter ‍revenue in line with ​estimates on Thursday, with banking and financial ⁠services clients resuming spending on technology amid better macroeconomic and policy clarity.
+--------------------------------------------------------------------------------
+TITLE: Mphasis meets third-quarter revenue estimates as banks resume tech spending
+DATE: 2026-01-22T12:42:28Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.68)
+IMPORTANCE: 1.0 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.066
+CONTENT: Indian information technology company Mphasis reported third-quarter ‍revenue in line with ​estimates on Thursday, with banking and financial ⁠services clients resuming spending on technology amid better macroeconomic and policy clarity.
+--------------------------------------------------------------------------------
+TITLE: Tata set to invest $11 billion in Maharashtra AI innovation city
+DATE: 2026-01-22T11:29:53Z
+SOURCE: Bloomberg
+SENTIMENT: positive (score=0.86)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.033
+CONTENT: The positioning of Innovation City adjacent to the Navi Mumbai airport, a landmark project developed by the Adani Group, is expected to create a powerful synergy between global transit and high-tech industry
+--------------------------------------------------------------------------------
+TITLE: Estonian healthtech a hotbed of innovation for UK and Europe
+DATE: 2026-01-22T10:40:00Z
+SOURCE: ComputerWeekly.com
+SENTIMENT: positive (score=0.69)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.027
+CONTENT: Estonia is a thriving hub for advancements in healthcare technology, harnessing artificial intelligence and genomics. Its healthtech industry is targeting the UK and Europe for collaboration and market development
+--------------------------------------------------------------------------------
+TITLE: Fusion energy spinout targets next-generation microwaves
+DATE: 2026-01-22T10:23:44Z
+SOURCE: Www.gov.uk
+SENTIMENT: positive (score=0.75)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.029
+CONTENT: UKAEA spinout, MuWave, has secured funding from the UK Innovation and Science Seed Fund (UKI2S) to develop and deliver high-power microwave technology
+--------------------------------------------------------------------------------
+TITLE: Insurance Analytics Market Trends and Opportunities 2026-2031: Insurers Embrace AI, Driving Enterprise Spend on Analytics Infrastructure
+DATE: 2026-01-22T09:58:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.91)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.035
+CONTENT: The market presents opportunities driven by regulatory needs, IoT data growth, and demand for streamlined operations The market presents opportunities driven by regulatory needs, IoT data growth, and demand for streamlined operations
+--------------------------------------------------------------------------------
+TITLE: IT Outsourcing (ITO): Global Market Trends and Regional Growth Forecasts (2026-2031)
+DATE: 2026-01-22T09:54:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.84)
+IMPORTANCE: 0.6 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.049
+CONTENT: Key opportunities in the IT outsourcing market include growth in AI-enabled services, demand for cloud-managed services, and generative AI service-desk automation. There's increasing need for cybersecurity talent and cloud-native app modernization. Key opport…
+--------------------------------------------------------------------------------
+TITLE: INVL Technology selects ICON Corporate Finance as its new investment adviser
+DATE: 2026-01-22T07:45:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.000
+CONTENT: INVL Technology (hereinafter – “the Company”) announces that it has completed the process of selecting an M&A investment adviser. Based on the main selection criteria, the Company on 21 January 2026 chose the international consultancy firm ICON Corporate Fina…
+--------------------------------------------------------------------------------
+TITLE: eBay updates legalese to ban AI-powered shop-bots
+DATE: 2026-01-22T03:37:13Z
+SOURCE: Theregister.com
+SENTIMENT: negative (score=-0.80)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: -0.031
+CONTENT: This establishment does not serve agents, says digital tat bazaar
+eBay has decided to ban agentic shopping bots from its digital tat bazaar.…
+--------------------------------------------------------------------------------
+TITLE: PE-backed digital engineering services firms turn to M&A deals in search for scale
+DATE: 2026-01-22T00:30:00Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.36)
+IMPORTANCE: 0.8 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.028
+CONTENT: With a receptive market for IPOs and a significant expansion of the market for digital engineering services—beyond traditional software development to encompass cloud-native product engineering, software modernisation and embedded AI solutions, among others—P…
+--------------------------------------------------------------------------------
+TITLE: 2026 budget: Stop frivolous insertions
+DATE: 2026-01-21T23:53:30Z
+SOURCE: The Punch
+SENTIMENT: negative (score=-0.05)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: -0.002
+CONTENT: The proposed 2026 Nigerian Budget exposes fiscal irresponsibility, with N3.5 trillion in new projects prioritizing elite comfort over citizen welfare.
+
+Read More: https://punchng.com/2026-budget-stop-frivolous-insertions/
+--------------------------------------------------------------------------------
+TITLE: Driving Industry Outcomes with Partner AI Solutions
+DATE: 2026-01-21T23:09:58Z
+SOURCE: Databricks.com
+SENTIMENT: positive (score=0.67)
+IMPORTANCE: 0.4 | DECAY: 0.10
+BEHAVIOURAL SCORE: 0.026
+CONTENT: Explore industry-specific GenAI partner solutions built on the Databricks Data Intelligence Platform for finance, healthcare, retail, manufacturing, and more.
+--------------------------------------------------------------------------------
+TITLE: Sessa Capital Expands to 10K SF at Vornado’s 888 Seventh Avenue
+DATE: 2026-01-21T19:10:17Z
+SOURCE: Commercial Observer
+SENTIMENT: positive (score=0.10)
+IMPORTANCE: 0.4 | DECAY: 0.07
+BEHAVIOURAL SCORE: 0.003
+CONTENT: Investment firm Sessa Capital is expanding its footprint in Manhattan, Commercial Observer has learned. The company, which specializes in trading stocks and options, grew to 10,000 square feet at Vornado Realty Trust’s 888 Seventh Avenue in a relocation from …
+--------------------------------------------------------------------------------
+TITLE: Chile's miners flag risks in dual oversight of mining, economy ministries
+DATE: 2026-01-21T18:56:00Z
+SOURCE: The Star Online
+SENTIMENT: negative (score=-0.42)
+IMPORTANCE: 0.4 | DECAY: 0.07
+BEHAVIOURAL SCORE: -0.012
+CONTENT: SANTIAGO, Jan 21 (Reuters) - Chile's ‌mining industry expressed concerns on Wednesday after President-elect Jose Antonio Kast named one minister to ‌oversee both mining and the economy, warning that the economically critical sector needs dedicated oversight. …
+--------------------------------------------------------------------------------
+TITLE: L&T bets $1 bn on inhouse forte to face Tata, Adani, Reliance in AI data centres
+DATE: 2026-01-21T16:37:43Z
+SOURCE: Livemint
+SENTIMENT: positive (score=0.54)
+IMPORTANCE: 0.4 | DECAY: 0.07
+BEHAVIOURAL SCORE: 0.015
+CONTENT: Larsen and Toubro Ltd believes end-to-end ownership will allow it to offer some of the cheapest services to clients, even as demand for data centres accelerates alongside the global push into artificial intelligence.
+--------------------------------------------------------------------------------
+TITLE: Big Data Analytics Market Analysis & Strategic Business Report, 2025-2033 | Astute Analytica
+DATE: 2026-01-21T14:35:00Z
+SOURCE: GlobeNewswire
+SENTIMENT: positive (score=0.36)
+IMPORTANCE: 0.4 | DECAY: 0.07
+BEHAVIOURAL SCORE: 0.010
+CONTENT: The global big data analytics market is driven by enterprises leveraging AI-powered predictive and prescriptive analytics to enhance decision-making and operational efficiency across industries. The global big data analytics market is driven by enterprises le…
+--------------------------------------------------------------------------------
+TITLE: Renovus-backed BlueRidge acquires life sciences consultancy Design Science
+DATE: 2026-01-21T12:47:27Z
+SOURCE: Pehub.com
+SENTIMENT: neutral (score=0.00)
+IMPORTANCE: 0.4 | DECAY: 0.07
+BEHAVIOURAL SCORE: 0.000
+CONTENT: BlueRidge is a Katy, Texas-based life sciences consulting and services platform.
+The post Renovus-backed BlueRidge acquires life sciences consultancy Design Science appeared first on PE Hub.
+--------------------------------------------------------------------------------
+TITLE: Delhi to modernise govt-run liquor stores for a sleeker shopping experience
+DATE: 2026-01-21T12:26:22Z
+SOURCE: The Times of India
+SENTIMENT: positive (score=0.64)
+IMPORTANCE: 0.4 | DECAY: 0.07
+BEHAVIOURAL SCORE: 0.018
+CONTENT: Delhi's liquor stores are undergoing a transformation as the government rolls out a modernization project aimed at elevating both customer satisfaction and operational performance. Expect to see inviting storefronts in busy areas, boasting stylish layouts, br…
+--------------------------------------------------------------------------------

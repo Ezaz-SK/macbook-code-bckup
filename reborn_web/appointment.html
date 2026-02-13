@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Reborn Unisex Studio</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'reborn-cream': '#fdfcf2',
+                        'reborn-dark': '#1a1a1a',
+                        'reborn-beige': '#f2ebca',
+                        'reborn-muted': '#555555',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-nav {
+                @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+            }
+            .btn-reborn {
+                @apply px-6 py-2 rounded-full border border-reborn-dark text-sm font-medium transition-all hover:bg-reborn-dark hover:text-white flex items-center gap-2;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-reborn-cream text-reborn-dark font-sans selection:bg-reborn-beige">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+            <div class="flex items-center gap-12">
+                <a href="index.html" class="text-2xl font-serif font-bold tracking-tight">Reborn Unisex Studio</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium opacity-80">
+                    <a href="index.html#services" class="hover:opacity-100 transition-opacity">Services</a>
+                    <a href="index.html#specialists" class="hover:opacity-100 transition-opacity">Specialists</a>
+                    <a href="work.html" class="hover:opacity-100 transition-opacity">Our works</a>
+                    <a href="index.html#about" class="hover:opacity-100 transition-opacity">About</a>
+                    <a href="index.html#contact" class="hover:opacity-100 transition-opacity">Contact</a>
+                </nav>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden md:block">
+                    <a href="index.html#contact" class="btn-reborn bg-white">
+                        Back to site <i class="fa-solid fa-arrow-left-long text-xs opacity-60 ml-2"></i>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-reborn-dark">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 p-6 flex flex-col gap-4 shadow-xl">
+            <a href="index.html#services" class="text-lg font-medium">Services</a>
+            <a href="index.html#specialists" class="text-lg font-medium">Specialists</a>
+            <a href="work.html" class="text-lg font-medium">Our works</a>
+            <a href="index.html#about" class="text-lg font-medium">About</a>
+            <a href="index.html#contact" class="text-lg font-medium">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <section class="max-w-4xl mx-auto px-6 text-center space-y-12">
+            <div class="space-y-4">
+                <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">BOOKING</p>
+                <h1 class="text-4xl md:text-7xl font-serif">Schedule your <br><span class="italic">visit online</span>
+                </h1>
+                <p class="max-w-lg mx-auto text-reborn-muted leading-relaxed">
+                    Choose a convenient time for your beauty treatment. Our specialists are ready to provide you with a
+                    transformative experience.
+                </p>
+            </div>
+
+            <div
+                class="w-full min-h-[800px] bg-white rounded-[3rem] shadow-2xl border border-reborn-dark/5 overflow-hidden">
+                <iframe
+                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2IitQcdTERqrI0xvxLzLALgzLpqPpNrnXmJN3XC2wIB28bHYTujvVT4w-mc9frH49eIVFM-JMg?gv=true"
+                    style="border: 0" width="100%" height="800" frameborder="0"></iframe>
+            </div>
+
+            <p class="text-[10px] uppercase tracking-widest opacity-40 font-bold">Secure online scheduling via Google
+                Calendar</p>
+
+            <!-- Contact Details & Socials -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pt-12 border-t border-reborn-dark/5">
+                <div class="space-y-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest opacity-40">Visit Us</h3>
+                    <p class="text-sm leading-relaxed">JA 1/B 1, Ground Floor, Near Sant Nirankari School, <br>Khirki
+                        Extension, Malviya Nagar, New Delhi 110017</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest opacity-40">Contact</h3>
+                    <p class="text-sm leading-relaxed font-medium">hello@rebornunisexstudio.com</p>
+                    <p class="text-sm leading-relaxed font-medium">+91 99997 46509 / 97590 15975</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest opacity-40">Connect</h3>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://wa.me/919999746509" target="_blank"
+                            class="w-10 h-10 rounded-full border border-reborn-dark/10 flex items-center justify-center hover:bg-reborn-dark hover:text-white transition-all"
+                            title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-reborn-dark/10 flex items-center justify-center hover:bg-reborn-dark hover:text-white transition-all"
+                            title="Instagram">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-reborn-dark/10 flex items-center justify-center hover:bg-reborn-dark hover:text-white transition-all"
+                            title="Facebook">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-reborn-dark/10 flex items-center justify-center hover:bg-reborn-dark hover:text-white transition-all"
+                            title="Twitter">
+                            <i class="fa-brands fa-x-twitter text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between border-t border-reborn-dark/5 gap-8">
+        <div class="flex items-center gap-2 group cursor-pointer">
+            <div
+                class="w-10 h-10 bg-reborn-dark rounded-full flex items-center justify-center -rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                <div class="w-5 h-5 border-2 border-white rounded-full border-t-transparent animate-spin-slow"></div>
+            </div>
+            <span class="text-sm font-medium tracking-tight">visit rebornunisexstudio.com</span>
+        </div>
+
+        <nav class="flex gap-8 text-xs font-semibold uppercase tracking-widest opacity-60">
+            <a href="#" class="hover:opacity-100 transition-opacity">Instagram</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Facebook</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Twitter</a>
+        </nav>
+
+        <p class="text-[10px] opacity-40 uppercase tracking-widest">&copy; 2026 REBORN UNISEX STUDIO. ALL RIGHTS
+            RESERVED.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking on links
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+    <style>
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 8s linear infinite;
+        }
+    </style>
+</body>
+
+</html>

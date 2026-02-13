@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - Reborn Unisex Studio Portfolio</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'reborn-cream': '#fdfcf2',
+                        'reborn-dark': '#1a1a1a',
+                        'reborn-beige': '#f2ebca',
+                        'reborn-muted': '#555555',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-nav {
+                @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+            }
+            .btn-reborn {
+                @apply px-6 py-2 rounded-full border border-reborn-dark text-sm font-medium transition-all hover:bg-reborn-dark hover:text-white flex items-center gap-2;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-reborn-cream text-reborn-dark font-sans selection:bg-reborn-beige">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+            <div class="flex items-center gap-12">
+                <a href="index.html" class="text-2xl font-serif font-bold tracking-tight">Reborn Unisex Studio</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium opacity-80">
+                    <a href="index.html#services" class="hover:opacity-100 transition-opacity">Services</a>
+                    <a href="index.html#specialists" class="hover:opacity-100 transition-opacity">Specialists</a>
+                    <a href="work.html" class="hover:opacity-100 transition-opacity border-b border-reborn-dark">Our
+                        works</a>
+                    <a href="index.html#about" class="hover:opacity-100 transition-opacity">About</a>
+                    <a href="appointment.html" class="hover:opacity-100 transition-opacity">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Centered Button -->
+            <!-- <div class="absolute left-1/2 -translate-x-1/2 flex md:hidden">
+                <a href="appointment.html" class="btn-reborn bg-white text-[10px] px-3 py-1.5 whitespace-nowrap">
+                    Make an appointment <i class="fa-solid fa-arrow-up-right-from-square text-[8px] opacity-60"></i>
+                </a>
+        </div> -->
+
+            <div class="flex items-center gap-4">
+                <!-- Desktop Right-aligned Button -->
+                <div class="hidden md:block">
+                    <a href="appointment.html" class="btn-reborn bg-white">
+                        Make an appointment <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60"></i>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-reborn-dark">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 p-6 flex flex-col gap-4 shadow-xl">
+            <a href="index.html#services" class="text-lg font-medium">Services</a>
+            <a href="index.html#specialists" class="text-lg font-medium">Specialists</a>
+            <a href="work.html" class="text-lg font-medium">Our works</a>
+            <a href="index.html#about" class="text-lg font-medium">About</a>
+            <a href="appointment.html" class="text-lg font-medium">Contact</a>
+            <a href="appointment.html" class="btn-reborn bg-reborn-dark text-white justify-center mt-4">Make an
+                appointment</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 mb-16">
+            <div class="max-w-3xl space-y-6 animate-fade-in-up">
+                <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">PORTFOLIO</p>
+                <h1 class="text-5xl md:text-8xl font-serif leading-tight">Masterpieces of <br><span class="italic">Style
+                        & Grace</span></h1>
+                <p class="text-reborn-muted max-w-lg leading-relaxed">
+                    Explore our curated collection of transformations, featuring precision hair styling, radiant
+                    skincare results, and professional cosmetic artistry.
+                </p>
+            </div>
+        </section>
+
+        <!-- Extensive Masonry Gallery -->
+        <section class="max-w-7xl mx-auto px-6">
+            <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+                <!-- Hair Styling -->
+                <div class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000&auto=format&fit=crop"
+                        alt="Elegant Updo"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div
+                        class="mt-4 px-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-xs font-semibold uppercase tracking-widest opacity-40">Hair Styling</span>
+                    </div>
+                </div>
+
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-75">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1000&auto=format&fit=crop"
+                        alt="Bridal Makeup"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-100">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop"
+                        alt="Precision Cut"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-150">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=1000&auto=format&fit=crop"
+                        alt="Color Transformation"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <!-- Skincare -->
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-200">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=2000&auto=format&fit=crop"
+                        alt="Facial Treatment"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-300">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop"
+                        alt="Spa Experience"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <!-- More Stylings -->
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-75">
+                    <img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?q=80&w=1000&auto=format&fit=crop"
+                        alt="Vibrant Color"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-100">
+                    <img src="https://images.unsplash.com/photo-1594744803329-a584af1cae24?q=80&w=1000&auto=format&fit=crop"
+                        alt="Professional Makeup"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-150">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop"
+                        alt="Lash Extension"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-200">
+                    <img src="https://images.unsplash.com/photo-1596433809252-260c2745dfdd?q=80&w=1000&auto=format&fit=crop"
+                        alt="Nail Art"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-300">
+                    <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=1000&auto=format&fit=crop"
+                        alt="Skin Rejuvenation"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <div
+                    class="break-inside-avoid rounded-[2rem] overflow-hidden group cursor-pointer animate-fade-in-up delay-75">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=1000&auto=format&fit=crop"
+                        alt="Modern Hairstyle"
+                        class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="max-w-7xl mx-auto px-6 py-24 text-center">
+            <div class="space-y-8 animate-fade-in-up">
+                <h2 class="text-4xl md:text-6xl font-serif italic text-reborn-dark/30">Ready for yours?</h2>
+                <a href="appointment.html"
+                    class="btn-reborn bg-reborn-dark text-white inline-flex items-center justify-center mx-auto px-8 py-4 text-sm font-bold border-2 border-reborn-dark hover:scale-105 transition-all duration-300">
+                    Book an appointment <i class="fa-solid fa-calendar-check text-xs opacity-60 ml-2"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between border-t border-reborn-dark/5 gap-8">
+        <div class="flex items-center gap-2 group cursor-pointer">
+            <div
+                class="w-10 h-10 bg-reborn-dark rounded-full flex items-center justify-center -rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                <div class="w-5 h-5 border-2 border-white rounded-full border-t-transparent animate-spin-slow"></div>
+            </div>
+            <span class="text-sm font-medium tracking-tight">Reborn Unisex Studio</span>
+        </div>
+
+        <nav class="flex gap-8 text-xs font-semibold uppercase tracking-widest opacity-60">
+            <a href="#" class="hover:opacity-100 transition-opacity">Instagram</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Facebook</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Twitter</a>
+        </nav>
+
+        <p class="text-[10px] uppercase tracking-widest opacity-40 font-bold">© 2026 REBORN UNISEX Studio. All rights
+            reserved.
+        </p>
+    </footer>
+
+    <script>
+        // Header animation on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('px-4', 'py-2');
+            } else {
+                header.classList.remove('px-4', 'py-2');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Chen - Reborn Unisex Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'reborn-cream': '#fdfcf2',
+                        'reborn-dark': '#1a1a1a',
+                        'reborn-beige': '#eaddca',
+                        'reborn-muted': '#666666',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-nav {
+                @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+            }
+            .btn-reborn {
+                @apply px-6 py-2 rounded-full border border-reborn-dark text-sm font-medium transition-all hover:bg-reborn-dark hover:text-white flex items-center gap-2;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-reborn-cream text-reborn-dark font-sans selection:bg-reborn-beige">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+            <div class="flex items-center gap-12">
+                <a href="index.html" class="text-2xl font-serif font-bold tracking-tight">Reborn Unisex Studio</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium opacity-80">
+                    <a href="index.html#services" class="hover:opacity-100 transition-opacity">Services</a>
+                    <a href="index.html#specialists" class="hover:opacity-100 transition-opacity">Specialists</a>
+                    <a href="work.html" class="hover:opacity-100 transition-opacity">Our works</a>
+                    <a href="index.html#about" class="hover:opacity-100 transition-opacity">About</a>
+                    <a href="appointment.html" class="hover:opacity-100 transition-opacity">Contact</a>
+                </nav>
+            </div>
+
+            <!-- <div class="absolute left-1/2 -translate-x-1/2 flex md:hidden">
+                <a href="appointment.html" class="btn-reborn bg-white text-[10px] px-3 py-1.5 whitespace-nowrap">
+                    Make an appointment <i class="fa-solid fa-arrow-up-right-from-square text-[8px] opacity-60"></i>
+                </a>
+            </div> -->
+
+            <div class="flex items-center gap-4">
+                <div class="hidden md:block">
+                    <a href="appointment.html" class="btn-reborn bg-white">
+                        Make an appointment <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60"></i>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-reborn-dark">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 p-6 flex flex-col gap-4 shadow-xl">
+            <a href="index.html#services" class="text-lg font-medium">Services</a>
+            <a href="index.html#specialists" class="text-lg font-medium">Specialists</a>
+            <a href="work.html" class="text-lg font-medium">Our works</a>
+            <a href="index.html#about" class="text-lg font-medium">About</a>
+            <a href="appointment.html" class="text-lg font-medium">Contact</a>
+            <a href="appointment.html" class="btn-reborn bg-reborn-dark text-white justify-center mt-4">Make an
+                appointment</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <!-- Specialist Profile -->
+        <section class="max-w-7xl mx-auto px-6 mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop"
+                            alt="Sarah Chen" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">MAKEUP ARTIST</p>
+                        <h1 class="text-5xl md:text-7xl font-serif">Sarah Chen</h1>
+                    </div>
+
+                    <p class="text-lg text-reborn-muted leading-relaxed italic font-serif">
+                        "Artistry in every touch. My goal is to enhance your natural features and reveal the beauty that
+                        already exists within you."
+                    </p>
+
+                    <div class="space-y-6 text-reborn-muted leading-relaxed">
+                        <p>
+                            Sarah Chen is a celebrated bridal and party makeup artist known for her editorial glow and
+                            focus on skin-first beauty. She has worked with numerous clients to redefine modern
+                            elegance for their special occasions.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
+                            <div>
+                                <h4 class="text-sm font-bold uppercase tracking-widest mb-2">Expertise</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>Editorial Makeup</li>
+                                    <li>Bridal Artistry</li>
+                                    <li>Skin-first Cosmetics</li>
+                                    <li>Aesthetic Therapy</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold uppercase tracking-widest mb-2">Philosophy</h4>
+                                <p class="text-sm">Radiance over coverage,<br>Confidence over vanity.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="appointment.html" class="btn-reborn bg-reborn-dark text-white px-8 py-4 w-fit">
+                        Book Sarah <i class="fa-solid fa-calendar-check text-xs opacity-60 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Works -->
+        <section class="max-w-7xl mx-auto px-6">
+            <div class="space-y-4 mb-16">
+                <p class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">PORTFOLIO</p>
+                <h2 class="text-4xl md:text-6xl font-serif">Selected Works</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group rounded-[2rem] overflow-hidden aspect-square bg-white border border-reborn-dark/5">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=1000&auto=format&fit=crop"
+                        alt="Work 1"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="group rounded-[2rem] overflow-hidden aspect-square bg-white border border-reborn-dark/5">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop"
+                        alt="Work 2"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="group rounded-[2rem] overflow-hidden aspect-square bg-white border border-reborn-dark/5">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1000&auto=format&fit=crop"
+                        alt="Work 3"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="max-w-7xl mx-auto px-6 py-12 border-t border-reborn-dark/5 flex flex-col md:flex-row items-center justify-between gap-8">
+        <a href="index.html" class="text-xl font-serif font-bold">REBORN</a>
+        <p class="text-[10px] opacity-40 uppercase tracking-widest">&copy; 2026 REBORN UNISEX STUDIO. ALL RIGHTS
+            RESERVED.</p>
+        <div class="flex gap-6 opacity-60 text-sm">
+            <a href="#" class="hover:opacity-100 transition-opacity">Instagram</a>
+            <a href="#" class="hover:opacity-100 transition-opacity">Facebook</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking on links
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
